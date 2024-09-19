@@ -1,0 +1,292 @@
+.form {
+  padding: 40px 0;
+  color: $color-default-white;
+  margin: 0 auto;
+  word-break: break-word;
+  min-height: 650px;
+
+  @media (min-width: $tablet-width) {
+    padding: 50.5px 71px 50px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 100px;
+  }
+}
+
+.form__wrapper {
+  background-color: $color-dark-gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 43px 0 40px;
+  background-image: image-set(url("../img/form/form-background-mobile@2x.webp") type("image/webp") 2x, url("../img/form/form-background-mobile@1x.webp") type("image/webp") 1x, url("../img/form/form-background-mobile@2x.jpg") type("image/jpg") 2x, url("../img/form/form-background-mobile@1x.jpg") type("image/jpg") 1x);
+
+  @media (min-width: $tablet-width) {
+    width: 652px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 16px;
+    background-image: image-set(url("../img/form/form-background-tablet@2x.webp") type("image/webp") 2x, url("../img/form/form-background-tablet@1x.webp") type("image/webp") 1x, url("../img/form/form-background-tablet@2x.jpg") type("image/jpg") 2x, url("../img/form/form-background-tablet@1x.jpg") type("image/jpg") 1x);
+
+    @media (min-width: $desktop-width) {
+      width: 1240px;
+      background-image: image-set(url("../img/form/form-background-desktop@2x.webp") type("image/webp") 2x, url("../img/form/form-background-desktop@1x.webp") type("image/webp") 1x, url("../img/form/form-background-desktop@2x.jpg") type("image/jpg") 2x, url("../img/form/form-background-desktop@1x.jpg") type("image/jpg") 1x);
+    }
+  }
+}
+
+.form__form-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 270px;
+  margin: 0 auto;
+  padding: 18px 15px 27px;
+  border-radius: 16px;
+  background-color: $color-yinmn-blue;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 362px;
+    padding: 30px 40px 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    padding: 30px 70px 40px;
+  }
+}
+
+.form__title {
+  font-size: 18px;
+  font-weight: $regular;
+  line-height: 17px;
+
+  margin: 0;
+
+
+  padding-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+    padding-top: 12px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 36px;
+    padding-top: 14px;
+    padding-bottom: 34px;
+  }
+}
+
+.form__description {
+  font-size: 14px;
+  font-weight: $regular;
+  line-height: 20px;
+  color: $color-alabaster;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+  }
+}
+
+.form__header-wrapper {
+  padding-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 40px;
+  }
+}
+
+.form__label {
+  font-size: 14px;
+  font-weight: $regular;
+  line-height: 14px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.8;
+  color: $color-alabaster;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 18px;
+  }
+}
+
+
+.form__field {
+  outline: none;
+  height: 46px;
+  padding-left: 25px;
+  border: 1px solid rgba($color-default-white, 0.3);
+  border-radius: 8px;
+  background-color: transparent;
+  margin-bottom: 20px;
+  margin-top: 12px;
+  color: $color-default-white;
+
+  &--textarea {
+    height: 63px;
+    margin-bottom: 21px;
+    resize: none;
+    padding: 15px 56px 14px 18px;
+
+    @media (min-width: $tablet-width) {
+      height: 57px;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 59px;
+      margin-bottom: 17px;
+    }
+  }
+}
+
+.form__field:disabled {
+  background-color: rgba($color-dark-gray, 0.2);
+  border-color: rgba($color-dark-gray, 0.5);
+  user-select: none;
+  pointer-events: none;
+}
+
+.form__field:disabled + .form__label-text {
+  color: rgba($color-dark-gray, 0.6);
+}
+
+.form__field:disabled,
+.form__field:disabled:hover {
+  background-color: rgba($color-dark-gray, 0.2);
+  border-color: rgba($color-dark-gray, 0.5);
+  user-select: none;
+}
+
+.form__field:disabled + .form__label {
+  color: rgba($color-dark-gray, 0.6);
+}
+
+.form__submit-button {
+  font-size: 12px;
+  font-weight: $medium;
+  line-height: 12px;
+
+  position: relative;
+
+  padding: 16px 58px 14px 20px;
+
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+
+  color: $color-default-white;
+  border: 1px solid $color-default-white;
+  border-radius: 30px;
+  background-color: transparent;
+  margin-top: 20px;
+  width: 260px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+
+    display: inline-block;
+
+
+    margin-top: 44px;
+    padding: 20px 85px 20px 35px;
+    width: 352px;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    margin: 43px auto 0;
+    padding: 20px 77px 20px 27px;
+  }
+
+  &::before {
+    position: absolute;
+
+    width: 34px;
+    height: 34px;
+    top: 4px;
+    right: 4px;
+    content: "";
+
+    border-radius: 44px;
+    background-color: $color-default-white;
+
+    @media (min-width: $tablet-width) {
+      top: 4px;
+      right: 4px;
+
+      width: 46px;
+      height: 46px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+
+    width: 8px;
+    height: 8px;
+
+    content: "";
+
+    background-color: $color-yinmn-blue;
+    transform: rotate(-45deg);
+
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    mask-repeat: no-repeat;
+    mask-size: cover;
+
+    @media (min-width: $tablet-width) {
+      top: 23px;
+      right: 23px;
+    }
+  }
+}
+
+.form__field:hover:not(:disabled),
+.form__field:hover:not(:disabled) + .form__label,
+.form__field:focus:not(:disabled),
+.form__field:focus:not(:disabled) + .form__label {
+  border-color: rgba($color-default-white, 1);
+  opacity: 1;
+}
+
+
+.form__input-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form__field.select__field {
+  margin-bottom: 0;
+  margin-top: 11px;
+  height: 48px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 37px;
+    height: 48px;
+    margin-top: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 20px;
+    margin-top: 11px;
+  }
+}

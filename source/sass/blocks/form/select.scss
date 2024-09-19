@@ -1,0 +1,139 @@
+.select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  ~.form__label-text {
+    margin-bottom: 11px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 11px;
+    }
+  }
+}
+
+.select__field {
+  position: relative;
+  outline: none;
+
+  width: 231px;
+  height: 52px;
+  padding-left: 20px;
+
+  border-radius: 8px;
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+
+
+  @media (min-width: $tablet-width) {
+    width: 321px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 326px;
+    height: 48px;
+  }
+}
+
+.select__dropdown {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 83px;
+  width: 100%;
+  display: none;
+  z-index: 10;
+  border-radius: 8px;
+  list-style: none;
+  opacity: 1;
+
+  &--shown {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 83px;
+  }
+}
+
+
+.select__option {
+  padding: 17px 20px;
+  line-height: 14px;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-yinmn-blue;
+  }
+
+  &:active,
+  &:focus {
+    outline: transparent;
+    color: $color-default-white;
+    background-color: $color-yinmn-blue;
+  }
+
+  &:first-of-type:hover,
+  &:first-of-type:focus {
+    border-radius: 7px 7px 0 0;
+  }
+
+  &:last-of-type:hover,
+  &:last-of-type:focus {
+    border-radius: 0 0 7px 7px;
+  }
+}
+
+.select--modal {
+  &::after {
+    background-color:$color-alcro-anis;
+  }
+
+  .select__field {
+    color: $color-alcro-anis;
+    border: 1px solid rgba($color-alcro-anis, 0.3);
+    background: url("/__spritemap#sprite-arrow-down-view") no-repeat calc(100% - 20px) center;
+    background-size: 16px 16px;
+  }
+
+  .select__field--shown {
+    background: url("/__spritemap#sprite-arrow-down-view") no-repeat calc(100% - 20px) center;
+    background-size: 16px 16px;
+  }
+
+  .select__dropdown {
+    color: $color-alcro-anis;
+    background-color: $color-default-white;
+    border: 1px solid $color-alcro-anis;
+  }
+}
+
+.select--form {
+  .select__field {
+    color: $color-default-white;
+    border: 1px solid rgba($color-default-white, 0.3);
+    background: url("/__spritemap#sprite-arrow-down-view") no-repeat calc(100% - 20px) center;
+    background-size: 15px 7px;
+  }
+
+  .select__field--shown {
+    background: url("/__spritemap#sprite-arrow-down-view") no-repeat calc(100% - 20px) center;
+    background-size: 15px 7px;
+  }
+
+  .select__dropdown {
+    color: $color-alcro-anis;
+    background-color: $color-default-white;
+    border: 1px solid $color-default-white;
+  }
+}

@@ -1,0 +1,385 @@
+.about__wrapper {
+  padding: 50px 0;
+  position: relative;
+  margin: 0 auto;
+  max-width: 290px;
+  word-break: break-word;
+  min-height: 400px;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 0;
+    max-width: 678px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 63px 100px 60px;
+    max-width: 1240px;
+  }
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 53px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.about__heading-wrapper {
+  max-width: 705px;
+
+  p {
+    font-size: 16px;
+    font-weight: $regular;
+    line-height: 22px;
+
+    margin: 0;
+    padding-bottom: 40px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 22px;
+      line-height: 32px;
+
+      padding: 0;
+    }
+  }
+}
+
+.about__title {
+  padding: 1px 0 14px 1px;
+
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 7px 0 30px;
+  }
+}
+
+.about__content-wrapper {
+  max-width: 498px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: $regular;
+    line-height: 22px;
+
+    margin: 0;
+    padding-bottom: 20px;
+
+    color: $color-yinmn-blue;
+
+    @media (min-width: $tablet-width) {
+      font-size: 28px;
+      line-height: 28px;
+
+      padding-bottom: 29px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 32px;
+      line-height: 36px;
+
+      padding: 7px 0 40px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+
+    margin: 0;
+    padding-bottom: 42px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+
+      padding-bottom: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      line-height: 26px;
+
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.about__button {
+  font-size: 12px;
+  font-weight: $medium;
+  line-height: 12px;
+
+  position: relative;
+
+  padding: 13px 58px 12.5px 20px;
+
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $color-yinmn-blue;
+  border: 1px solid $color-yinmn-blue;
+  border-radius: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+
+    display: inline-block;
+
+    padding: 19px 80px 21px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 19px 81px 21px 30px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+
+    width: 34px;
+    height: 34px;
+
+    content: "";
+
+    border-radius: 44px;
+    background-color: $color-yinmn-blue;
+
+    @media (min-width: $tablet-width) {
+      top: 4px;
+      right: 4px;
+
+      width: 46px;
+      height: 46px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+
+    width: 8px;
+    height: 8px;
+
+    content: "";
+
+    background-color: $color-default-white;
+    transform: rotate(-45deg);
+
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    mask-repeat: no-repeat;
+    mask-size: cover;
+
+    stroke-width: 1.6px;
+
+    @media (min-width: $tablet-width) {
+      top: 23px;
+      right: 23px;
+    }
+  }
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 20px 20px 40px 10px;
+
+  list-style: none;
+
+  color: $color-alabaster;
+
+  border-radius: 20px;
+  background-color: $color-yinmn-blue;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 50px;
+
+    row-gap: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 100px 50px 106px;
+  }
+}
+
+.about__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin: 22.5px 0 0 10px;
+  padding: 15px 19px 16px 20px;
+
+  border: 1px solid $color-alabaster;
+  border-radius: 16px;
+
+  row-gap: 5px;
+
+  &::before {
+    position: absolute;
+    z-index: 0;
+    top: -23px;
+    left: -21px;
+
+    width: 42px;
+    height: 42px;
+    background: #316dc2 url("/__spritemap#sprite-star-view") no-repeat center;
+    background-size: 22px 22px;
+    content: "";
+  }
+
+
+  &:nth-child(2n),
+  &:nth-child(3n) {
+    margin: 22px 0 0 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 209px;
+    margin: 22px 0 0 20px;
+    padding: 15px 22px 15px 20px;
+
+    row-gap: 7px;
+
+    &:nth-child(2n),
+    &:nth-child(3n) {
+      margin: 22px 0 0 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 402px;
+    margin: 22px 0 0 14px;
+    padding: 50px 40px 30px;
+
+    &:nth-child(1n) {
+      padding-top: 50px;
+
+      p {
+        padding-left: 42px;
+      }
+    }
+
+    &:nth-child(2n) {
+      margin: 22px 0 0 14px;
+      padding-top: 30px;
+
+      h3 {
+        padding-top: 21px;
+      }
+
+      p {
+        padding-left: 26px;
+      }
+    }
+
+    &:nth-child(3n) {
+      margin: 22px 0 0 14px;
+      padding-top: 30px;
+
+      h3 {
+        padding-top: 11px;
+      }
+
+      p {
+        padding-left: 28px;
+      }
+    }
+
+    &:nth-child(4n) {
+      padding-top: 40px;
+
+      h3 {
+        width: 225px;
+        padding-top: 1px;
+      }
+
+      p {
+        position: relative;
+
+        padding-left: 66px;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: $regular;
+    line-height: 20px;
+
+    width: fit-content;
+    margin: 0;
+    padding-bottom: 9px;
+
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 22px;
+
+      padding-bottom: 8px;
+
+      letter-spacing: 0.2px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 26px;
+      line-height: 30px;
+
+      padding: 0;
+
+      letter-spacing: 0.26px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: $light;
+    line-height: 20px;
+
+    width: fit-content;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+    }
+  }
+}
+
+.about__overlay.is-open {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 20;
+  background-color: $color-squid-ink-40;
+}
