@@ -1,10 +1,13 @@
 .button {
-  cursor: pointer;
-  user-select: none;
   text-decoration: none;
   word-break: break-word;
-  transition: all 300ms ease;
+
   outline-offset: 5px;
+  cursor: pointer;
+
+  transition: all 300ms ease;
+
+  user-select: none;
 
   &:focus-visible {
     background-color: transparent;
@@ -14,6 +17,7 @@
 .button--small {
   width: 30px;
   height: 30px;
+
   border-radius: 30px;
   outline-offset: 5px;
 }
@@ -21,15 +25,17 @@
 .button--light {
   &:focus-visible {
     &::after {
-      transform: rotate(45deg);
-      transition: all 300ms ease;
       background-color: $color-default-white;
+      transform: rotate(45deg);
+
+      transition: all 300ms ease;
     }
   }
 
   &:hover,
   &:active {
     color: $color-default-white;
+
     background-color: $color-yinmn-blue;
 
     &::before {
@@ -37,9 +43,8 @@
     }
 
     &::after {
-      transform: rotate(45deg);
-
       background-color: $color-yinmn-blue;
+      transform: rotate(45deg);
     }
   }
 
@@ -51,22 +56,23 @@
     }
 
     &::after {
-      transform: rotate(45deg);
-
       background-color: rgba($color-yinmn-blue, 0.7);
+      transform: rotate(45deg);
     }
   }
 }
 
 .button--light:disabled,
 .button--light.is-disabled {
-  pointer-events: none;
-
   color: $color-dark-gray;
+
   border-color: $color-dark-gray;
+
+  pointer-events: none;
 
   &::before {
     color: $color-default-white;
+
     background-color: $color-dark-gray;
   }
 
@@ -82,15 +88,15 @@
 .button--blue {
   &:focus-visible {
     &::after {
-      transform: rotate(45deg);
-
       background-color: $color-yinmn-blue;
+      transform: rotate(45deg);
     }
   }
 
   &:hover,
   &:active {
     color: $color-yinmn-blue;
+
     background-color: $color-default-white;
 
     &::before {
@@ -98,9 +104,8 @@
     }
 
     &::after {
-      transform: rotate(45deg);
-
       background-color: $color-default-white;
+      transform: rotate(45deg);
     }
   }
 
@@ -112,22 +117,23 @@
     }
 
     &::after {
-      transform: rotate(45deg);
-
       background-color: rgba($color-default-white, 0.7);
+      transform: rotate(45deg);
     }
   }
 }
 
 .button--blue:disabled,
 .button--blue.is-disabled {
-  pointer-events: none;
-
   color: $color-dark-gray;
+
   border-color: $color-dark-gray;
+
+  pointer-events: none;
 
   &::before {
     color: $color-default-white;
+
     background-color: $color-dark-gray;
   }
 
@@ -141,49 +147,47 @@
 }
 
 .button--swiper {
+  position: relative;
+
   width: 22px;
   height: 22px;
-  position: relative;
-  border: none;
+
   background-color: transparent;
+  border: none;
 
 
   &::after {
+    content: "";
     position: relative;
-    top: 1px;
-    left: 0;
+    top: 0.5px;
+    left: 0.5px;
 
     display: block;
-
-    width: 8px;
-    height: 8px;
-
-    content: "";
+    width: 9px;
+    height: 9px;
 
     background-color: $color-yinmn-blue;
 
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
     mask-image: url("/__spritemap#sprite-arrow-view");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
   }
 
   &::before {
+    content: "";
     position: absolute;
-    z-index: -1;
     top: 1px;
     left: 0;
+    z-index: -1;
 
     display: block;
-
     width: 22px;
     height: 22px;
 
-    content: "";
-
-    opacity: 0;
-    border-radius: 30px;
     background-color: $color-default-white;
+    border-radius: 30px;
+    opacity: 0;
   }
 
   &:hover::after {
@@ -228,8 +232,13 @@
 
 .button--prev {
   &::after {
-    left: 2px;
+    left: 1px;
 
     transform: rotate(180deg);
+
+    @media (min-width: $tablet-width){
+      top: 0;
+      left: 0;
+    }
   }
 }

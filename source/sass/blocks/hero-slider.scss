@@ -1,5 +1,6 @@
 .hero__slider {
   position: relative;
+
   min-height: 500px;
 }
 
@@ -8,17 +9,21 @@
 }
 
 .slider__swiper-wrapper.swiper-wrapper {
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
+
   list-style: none;
 }
 
 .slider__swiper-slide {
-  word-break: break-word;
   position: relative;
-  min-height: 568px;
+
   width: 100%;
+  min-height: 568px;
+
+  word-break: break-word;
+
   background-color: $color-dark-gray;
   background-repeat: no-repeat;
   background-position: 52.6% 50%;
@@ -33,13 +38,13 @@
   }
 
   &::after {
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: -1;
-    content: "";
 
     background-color: rgba($color-yinmn-blue, 0.2);
   }
@@ -99,34 +104,34 @@
 }
 
 .slider__title {
-  font-size: 22px;
-  font-weight: $regular;
-  line-height: 26px;
-
   width: 262px;
   margin: 0;
   padding: 20px 14px 16px;
 
+  font-weight: $regular;
+  font-size: 22px;
+  line-height: 26px;
   color: $color-yinmn-blue;
-  border-radius: 0 16px 16px 0;
+
   background-color: $color-default-white;
+  border-radius: 0 16px 16px 0;
 
   @media (min-width: $tablet-width) {
-    font-size: 36px;
-    line-height: 44px;
-
     width: 579px;
     padding: 30px 40px 24px;
+
+    font-size: 36px;
+    line-height: 44px;
 
     border-radius: 0 30px 30px 0;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 54px;
-    line-height: 62px;
-
     width: 868px;
     padding: 40px 50px 30px;
+
+    font-size: 54px;
+    line-height: 62px;
   }
 }
 
@@ -134,23 +139,21 @@
   position: relative;
 
   display: flex;
-  align-items: start;
   flex-direction: column;
-
+  align-items: start;
   width: fit-content;
-
-  border-radius: 0 0 30px 30px;
 
   column-gap: 30px;
 
+  border-radius: 0 0 30px 30px;
+
   @media (min-width: $tablet-width) {
     flex-direction: row;
-
     padding: 0 40px 35px;
 
-    background-color: $color-default-white;
-
     column-gap: 75px;
+
+    background-color: $color-default-white;
   }
 
   @media (min-width: $desktop-width) {
@@ -160,6 +163,7 @@
   }
 
   &::after {
+    content: "";
     position: absolute;
     top: 0;
     right: -10px;
@@ -167,10 +171,8 @@
     width: 10px;
     height: 10px;
 
-    content: "";
-    transform: rotate(90deg);
-
     background-color: $color-default-white;
+    transform: rotate(90deg);
 
     mask-image: url("/__spritemap#sprite-angle-view");
     mask-repeat: no-repeat;
@@ -196,63 +198,67 @@
 }
 
 .slider__content-text p {
-  font-size: 14px;
-  line-height: 20px;
-
   width: 241px;
   margin: 0;
   padding: 0 12px 15px 14px;
 
-  border-radius: 0 0 16px;
+  font-size: 16px;
+  line-height: 20px;
+
   background-color: $color-default-white;
+  border-radius: 0 0 16px;
 
   @media (min-width: $tablet-width) {
-    font-size: 16px;
-
     width: 240px;
     padding: 0;
+
+    font-size: 16px;
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    line-height: 26px;
-
     width: 446px;
+
+    line-height: 26px;
   }
 }
 
 .slider__button {
-  font-size: 12px;
-  font-weight: $medium;
-  line-height: 12px;
-
   position: relative;
+
   max-width: 200px;
   padding: 13px 58px 12px 20px;
 
-  letter-spacing: 0.28px;
+  font-weight: $medium;
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-yinmn-blue;
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 0.24px;
 
-  color: $color-yinmn-blue;
+  background-color: $color-default-white;
   border: 1px solid $color-yinmn-blue;
   border-radius: 30px;
-  background-color: $color-default-white;
 
   @media (min-width: $tablet-width) {
+    display: inline-block;
+    max-width: 101px;
+    padding: 20.5px 80px 19.5px 30px;
     font-size: 14px;
     line-height: 14px;
-    max-width: 101px;
-    display: inline-block;
-
-    padding: 19px 80px 21px 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 21px 81px 21px 30px;
     max-width: 200px;
+    padding: 21px 81px 21px 30px;
   }
 
   &::before {
+    content: "";
     position: absolute;
     top: 4px;
     right: 4px;
@@ -260,10 +266,8 @@
     width: 34px;
     height: 34px;
 
-    content: "";
-
-    border-radius: 44px;
     background-color: $color-yinmn-blue;
+    border-radius: 44px;
 
     @media (min-width: $tablet-width) {
       top: 4px;
@@ -280,14 +284,13 @@
   }
 
   &::after {
+    content: "";
     position: absolute;
     top: 17px;
     right: 17px;
 
     width: 8px;
     height: 8px;
-
-    content: "";
 
     background-color: $color-default-white;
 
@@ -310,16 +313,16 @@
 .slider__button-wrapper {
   position: relative;
 
-  padding: 22px 15px 23px;
+  padding: 18px 15px 20px;
 
-  border-radius: 0 0 14px 14px;
   background-color: $color-default-white;
+  border-radius: 0 0 14px 14px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
 
-    border-radius: 0;
     background-color: transparent;
+    border-radius: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -327,6 +330,7 @@
   }
 
   &::after {
+    content: "";
     position: absolute;
     top: 0;
     right: -10px;
@@ -334,10 +338,8 @@
     width: 10px;
     height: 10px;
 
-    content: "";
-    transform: rotate(90deg);
-
     background-color: $color-default-white;
+    transform: rotate(90deg);
 
     mask-image: url("/__spritemap#sprite-angle-view");
     mask-repeat: no-repeat;
@@ -369,52 +371,54 @@
   top: 213px;
   right: 0;
   left: 0;
-  max-width: 290px;
   z-index: 2;
+
+  max-width: 290px;
   margin: 0 auto;
 
-  @media (width >= 321px) {
+  @media (width >=321px) {
     left: -15px;
   }
 
   @media (min-width: $tablet-width) {
     top: 653px;
-    max-width: 768px;
     left: 45px;
+
+    max-width: 768px;
   }
 
-  @media (width >= 769px) {
+  @media (width >=769px) {
     left: 0;
   }
 
   @media (min-width: $desktop-width) {
     top: 409px;
+    left: 100px;
+
     max-width: 1440px;
+  }
+
+  @media (width >=1540px) {
     left: 100px;
   }
 
-  @media (width >= 1540px) {
-    left: 100px;
-  }
-
-  @media (width >= 1660px) {
+  @media (width >=1660px) {
     left: 0;
   }
 }
 
-.slider__pagination {
+.slider__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   position: relative;
-  z-index: 1;
   top: -12px;
+  z-index: 1;
 
   display: flex;
-
   width: fit-content;
   height: fit-content;
   padding: 10px 16px;
 
-  border-radius: 12px 12px 0 0;
   background-color: $color-default-white;
+  border-radius: 12px 12px 0 0;
 
   gap: 12px;
 
@@ -431,14 +435,13 @@
   }
 
   &::after {
+    content: "";
     position: absolute;
     right: -10px;
     bottom: 0;
 
     width: 10px;
     height: 10px;
-
-    content: "";
 
     background-color: $color-default-white;
 
@@ -455,18 +458,18 @@
   }
 }
 
-.slider__pagination-button {
+.slider__pagination-bullet {
+  box-sizing: border-box;
   width: 8px;
   height: 8px;
-
   padding: 0;
 
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
+  background-color: transparent;
   border: 2px solid $color-yinmn-blue;
   border-radius: 50%;
-  background-color: transparent;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
 
   @media (min-width: $tablet-width) {
     width: 12px;
@@ -474,8 +477,8 @@
   }
 
   &:hover {
+    background-color: $color-yinmn-blue;
     border-color: $color-default-white;
-    /* background-color: $color-yinmn-blue; */
   }
 
   &:focus-within {
@@ -483,12 +486,12 @@
   }
 
   &:active {
-    border-color: $color-medium-sapphire;
     background-color: $color-medium-sapphire;
+    border-color: $color-medium-sapphire;
   }
-}
 
-.slider__pagination-button--active {
-  border-color: $color-medium-sapphire;
-  background-color: $color-medium-sapphire;
+  &--active {
+    background-color: $color-medium-sapphire;
+    border-color: $color-medium-sapphire;
+  }
 }

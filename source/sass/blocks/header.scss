@@ -142,7 +142,6 @@
     height: 12px;
 
     content: "";
-    transform: rotate(180deg);
 
     background-image: url("/__spritemap#sprite-arrow-down-view");
     background-repeat: no-repeat;
@@ -154,17 +153,11 @@
   color: $color-default-white;
 
   &::after {
-    transform: rotate(0);
+    transform: rotate(180deg);
   }
 }
 
 .header__nav.is-open {
-  .header__logo {
-    @media (max-width: $mobile-width) {
-      display: none;
-    }
-  }
-
   .header__button {
     width: 290px;
 
@@ -222,7 +215,7 @@
   line-height: 14px;
 
   position: relative;
-  z-index: 5;
+  z-index: 3;
   left: 0;
   max-width: 500px;
   min-width: 136px;
@@ -330,4 +323,9 @@
   &:focus-visible {
     outline: none;
   }
+}
+
+.overlay.is-open-menu {
+  display: block;
+  opacity: 1;
 }

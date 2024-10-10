@@ -1,9 +1,10 @@
 .select {
   position: relative;
+
   display: flex;
   flex-direction: column;
 
-  ~.form__label-text {
+  ~ .form__label-text {
     margin-bottom: 11px;
 
     @media (min-width: $tablet-width) {
@@ -18,17 +19,20 @@
 
 .select__field {
   position: relative;
-  outline: none;
 
-  width: 231px;
-  height: 52px;
+  margin: 0;
+
+  /* width: 231px; */
+
+  /*  height: 52px; */
   padding-left: 20px;
 
-  border-radius: 8px;
   background-color: transparent;
-  appearance: none;
+  border-radius: 8px;
+  outline: none;
   cursor: pointer;
-  margin: 0;
+
+  appearance: none;
 
 
   @media (min-width: $tablet-width) {
@@ -43,14 +47,17 @@
 
 .select__dropdown {
   position: absolute;
+  top: 83px;
+  z-index: 10;
+
+  display: none;
+  width: calc(100% - 10px);
   margin: 0;
   padding: 0;
-  top: 83px;
-  width: 100%;
-  display: none;
-  z-index: 10;
-  border-radius: 8px;
+
   list-style: none;
+
+  border-radius: 8px;
   opacity: 1;
 
   &--shown {
@@ -69,7 +76,9 @@
 
 .select__option {
   padding: 17px 20px;
+
   line-height: 14px;
+
   cursor: pointer;
 
   &:hover {
@@ -78,9 +87,10 @@
 
   &:active,
   &:focus {
-    outline: transparent;
     color: $color-default-white;
+
     background-color: $color-yinmn-blue;
+    outline: transparent;
   }
 
   &:first-of-type:hover,
@@ -96,23 +106,27 @@
 
 .select--modal {
   &::after {
-    background-color:$color-alcro-anis;
+    background-color: $color-alcro-anis;
   }
 
   .select__field {
     color: $color-alcro-anis;
+
+    background: url("/__spritemap#sprite-arrow-down-grey-view") no-repeat calc(100% - 20px) center;
+    background-size: 15px 7px;
     border: 1px solid rgba($color-alcro-anis, 0.3);
-    background: url("/__spritemap#sprite-arrow-down-view") no-repeat calc(100% - 20px) center;
-    background-size: 16px 16px;
   }
 
   .select__field--shown {
-    background: url("/__spritemap#sprite-arrow-down-view") no-repeat calc(100% - 20px) center;
-    background-size: 16px 16px;
+    background: url("/__spritemap#sprite-arrow-up-grey-view") no-repeat calc(100% - 20px) center;
+    background-size: 15px 7px;
   }
 
   .select__dropdown {
+    width: 100%;
+
     color: $color-alcro-anis;
+
     background-color: $color-default-white;
     border: 1px solid $color-alcro-anis;
   }
@@ -121,18 +135,20 @@
 .select--form {
   .select__field {
     color: $color-default-white;
-    border: 1px solid rgba($color-default-white, 0.3);
+
     background: url("/__spritemap#sprite-arrow-down-view") no-repeat calc(100% - 20px) center;
-    background-size: 15px 7px;
+    background-size: 16px 8px;
+    border: 1px solid rgba($color-default-white, 0.3);
   }
 
   .select__field--shown {
-    background: url("/__spritemap#sprite-arrow-down-view") no-repeat calc(100% - 20px) center;
+    background: url("/__spritemap#sprite-arrow-up-view") no-repeat calc(100% - 20px) center;
     background-size: 15px 7px;
   }
 
   .select__dropdown {
     color: $color-alcro-anis;
+
     background-color: $color-default-white;
     border: 1px solid $color-default-white;
   }

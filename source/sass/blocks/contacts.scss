@@ -1,8 +1,10 @@
 .contacts {
-  padding: 75px 15px 70px;
-  word-break: break-word;
-  background-color: $color-yinmn-blue;
   min-height: 500px;
+  padding: 75px 15px 70px;
+
+  word-break: break-word;
+
+  background-color: $color-yinmn-blue;
 
   @media (min-width: $tablet-width) {
     padding: 100px 45px;
@@ -33,14 +35,14 @@
 .contacts__list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
-
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+
   list-style-type: none;
 
-  gap: 21px;
+  gap: 20px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -64,13 +66,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   margin-bottom: 30px;
   padding-bottom: 30.5px;
 
   border-bottom: 2px solid rgba($color-default-white, 0.2);
 
-  gap: 35px;
+  gap: 34.5px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 30px;
@@ -80,7 +81,6 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-
     margin-bottom: 40px;
     padding-bottom: 40px;
 
@@ -89,18 +89,17 @@
 }
 
 .contacts__heading {
-  font-size: 12px;
-  font-weight: $regular;
-  line-height: 12px;
-
   margin: 0;
   padding-bottom: 15px;
 
-  letter-spacing: 0.12px;
+  font-weight: $regular;
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-alabaster;
   text-transform: uppercase;
+  letter-spacing: 0.12px;
 
   opacity: 0.8;
-  color: $color-alabaster;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 23px;
@@ -112,16 +111,14 @@
 }
 
 .contacts__description {
-  font-size: 14px;
-  font-weight: $regular;
-  line-height: 20px;
-  font-style: normal;
-
   margin: 0;
 
-  text-decoration: none;
-
+  font-weight: $regular;
+  font-size: 14px;
+  line-height: 20px;
   color: $color-default-white;
+  text-decoration: none;
+  font-style: normal;
 
   br {
     display: none;
@@ -152,18 +149,18 @@
   }
 
   &:focus-visible {
+    color: $color-alcro-anis;
     text-decoration: underline;
 
-    opacity: 1;
-    color: $color-alcro-anis;
     outline: none;
+    opacity: 1;
   }
 
   &:active {
+    color: $color-default-white;
     text-decoration: underline;
 
     opacity: 1;
-    color: $color-default-white;
   }
 }
 
@@ -172,14 +169,14 @@
   position: relative;
 
   &::after {
+    content: "";
     position: absolute;
     top: 46px;
     left: 143.27px;
     z-index: 2;
+
     width: 18px;
     height: 24px;
-
-    content: '';
 
     background: url("/__spritemap#sprite-pin-view") no-repeat center;
 
@@ -198,9 +195,10 @@
 }
 
 .contacts__map-img {
-  display: block;
   position: relative;
 
-  border-radius: 16px;
+  display: block;
+
   background-color: $color-dark-gray;
+  border-radius: 16px;
 }

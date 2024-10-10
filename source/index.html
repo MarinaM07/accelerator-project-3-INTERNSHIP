@@ -13,22 +13,29 @@
   <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-
-  <title>Internship</title>
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
 <body class="page-body">
+  <div class="overlay"></div>
   <main>
     <section class="hero" data-test="hero">
       <h1 class="visually-hidden">Internship programs</h1>
       <div class="hero__header header">
         <div class="header__wrapper">
-          <a class="header__logo" aria-label="Логотип сайта Internship." aria-current="page">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="white">
-              <use xlink:href="#sprite-logotype"></use>
+          <div class="header__logo" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M.92 8.8c-.85.6-1.35 1.9-.41 3.43.94 1.53 14.38 11.9 14.88 12.2.49.28.98.33 2.24-.68 1.25-1 11.74-8.88 12-9.12.44-.38.54-1.3 0-1.73 0 0-12.7 9.5-13.11 9.89-.42.38-1.06-.24-.94-1.06.12-.81.2-.9 1.82-2.16a2565.5 2565.5 0 0 1 11.18-8.48c.47-.35.48-.96-.3-1.5l-13.01-9.27c-.4-.3-.93-.55-1.73.02-.81.58-11.06 7.35-12.62 8.46Z"
+                fill="#316DC2" />
+              <path
+                d="M15.39 25.43c-.33-.19-6.23-4.71-10.51-8.24v7.35c0 5.37 15.12 8.24 20.13 1.64v-7.03a766.27 766.27 0 0 0-7.38 5.61c-1.26 1-1.75.96-2.24.67Z"
+                fill="#316DC2" />
+              <path d="M21.78 17.37s2.25 1.13 2.41 5.68l-1.09-.3-.87 1.85c-.37-4.98-2.37-5.7-2.37-5.7l1.92-1.53Z"
+                fill="#98B8E6" />
+              <title>Логотип сайта Internship.</title>
             </svg>
-          </a>
+          </div>
 
           <nav class="header__nav">
             <button class="header__button button" type="button">Меню</button>
@@ -95,30 +102,23 @@
           </nav>
         </div>
       </div>
+
       <div class="hero__slider slider">
+
         <div class="slider__swiper swiper">
+
           <div class="slider__pagination-container">
-            <div class="slider__pagination swiper-pagination">
-              <button class="slider__pagination-button slider__pagination-button--active" type="button">
-                <span class="visually-hidden">Первый слайд промо.</span>
-              </button>
-              <button class="slider__pagination-button" type="button">
-                <span class="visually-hidden">Второй слайд промо.</span>
-              </button>
-              <button class="slider__pagination-button" type="button">
-                <span class="visually-hidden">Третий слайд промо.</span>
-              </button>
-            </div>
+            <div class="slider__pagination swiper-pagination"></div>
           </div>
           <ul class="slider__swiper-wrapper swiper-wrapper">
             <li class="slider__swiper-slide slider__swiper-slide--education swiper-slide">
               <div class="slider__container">
-                <h2 class="slider__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+
+                <h2 class="slider__title">Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
                 <div class="slider__content">
                   <div class="slider__content-text">
                     <p>Погрузитесь в академическую программу, проходя практику в&nbsp;разных городах, ощущая
-                      настоящий
-                      студенческий стиль жизни!</p>
+                      настоящий студенческий<br>&nbsp;стиль жизни!</p>
                   </div>
                   <div class="slider__button-wrapper">
                     <a class="slider__button button button--light" href="#">Подробнее</a>
@@ -143,7 +143,6 @@
             </li>
 
             <li class="slider__swiper-slide slider__swiper-slide--internship swiper-slide">
-
               <div class="slider__container">
                 <h2 class="slider__title">Программы стажировок в крупнейших компаниях мира</h2>
                 <div class="slider__content">
@@ -160,103 +159,104 @@
           </ul>
         </div>
       </div>
-
-      <div class="hero__overlay">
-        <div class="hero__popup modal">
-          <button class="modal__close-button" type="button">
-            <span class="visually-hidden">Закрыть окно.</span>
-          </button>
-          <h2 class="modal__title">Напишите нам</h2>
-          <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
-          <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-
-            <div class="modal__input-wrapper">
-              <input class="modal__field" type="text" name="name" id="modal-name" required>
-              <label class="modal__label" for="modal-name">Имя</label>
-            </div>
-
-            <div class="modal__input-wrapper">
-              <input class="modal__field" type="tel" name="phone" id="modal-phone" required>
-              <label class="modal__label" for="modal-phone">Телефон</label>
-            </div>
-
-
-            <div class="modal__select select select--modal">
-              <input class="modal__field select__field" id="modal-city" name="city" type="text" autocomplete="off"
-                required>
-              <label class="modal__label" for="modal-city">Выберите город</label>
-              <ul class="select__dropdown" id="select-modal">
-                <li class="select__option">&nbsp;</li>
-                <li class="select__option">Москва</li>
-                <li class="select__option">Санкт-Петербург</li>
-                <li class="select__option">Новосибирск</li>
-                <li class="select__option">Екатеренбург</li>
-              </ul>
-
-            <label class="modal__checkbox checkbox checkbox--modal">
-              <input class="checkbox__field visually-hidden" type="checkbox" name="permission" id="permission-modal"
-                required>
-              <span class="checkbox__check"></span>
-              <span class="checkbox__text">Я согласен на обработку моих персональных данных</span>
-            </label>
-
-            <button class="modal__submit-button button button--light" type="submit">Отправить</button>
-          </form>
-          <div class="modal__overlay"></div>
-        </div>
-      </div>
     </section>
 
     <section class="about" id="about" data-test="about">
       <div class="about__wrapper">
         <div class="about__container">
           <div class="about__heading-wrapper">
-            <h2 class="about_title title">О проекте «Стажировка»</h2>
+            <h2 class="about__title title">О проекте «Стажировка»</h2>
             <p>«Стажировка» — совместный проект правительств и волонтёрских бригад.</p>
           </div>
 
           <div class="about__content-wrapper">
             <h3>Наша цель</h3>
-            <p>Наша деятельность направлена на повышение квалификации
+            <p>Наша деятельность направлена на&nbsp;повышение квалификации
               молодых специалистов на ранних и средних стадиях карьеры,
-              предоставляя им инструменты для решения сложных проблем,
-              с которыми сталкиваются в мире. Цель центра — наделить этих
+              предоставляя им&nbsp;инструменты для решения сложных проблем,
+              с&nbsp;которыми сталкиваются в мире. Цель центра — наделить этих
               людей способностью инициировать значимые изменения.</p>
 
-            <a class="about__button button button--light" href="#">Подпробнее о проекте</a>
+            <a class="about__button button button--light" href="#">Подробнее о проекте</a>
           </div>
         </div>
 
         <ul class="about__list">
           <li class="about__item">
             <h3>Более 250 программ</h3>
-            <p>учебных и рабочих, разной длительностью от 3 месяцев до 1 года</p>
+            <p>учебных и рабочих, разной длительностью от&nbsp;3&nbsp;месяцев до 1 года</p>
           </li>
           <li class="about__item">
             <h3>Более 3000 участников</h3>
-            <p>уже успешно прошли программу от «Стажировка» и остались в разных странах</p>
+            <p>уже успешно прошли программу от&nbsp;«Стажировка» и&nbsp;остались в разных странах</p>
           </li>
           <li class="about__item">
-            <h3>Участники из 60 стран</h3>
-            <p>студенты со всего мира приезжают на программу «Стажировки» от 3 месяцев до 1 года</p>
+            <h3>Участники из&nbsp;60&nbsp;стран</h3>
+            <p>студенты со всего мира приезжают на программу «Стажировки»<br>от 3 месяцев до&nbsp;1&nbsp;года</p>
           </li>
           <li class="about__item">
-            <h3>от 4 200 $ до 8 400 $</h3>
-            <p>грант всем участникам для комфортного прохождения программы</p>
+            <h3>от 4 200 $ <br> до 8 400 $</h3>
+            <p>грант всем участникам для&nbsp;комфортного прохождения программы</p>
           </li>
         </ul>
       </div>
+
+      <div class="about__modal modal">
+        <button class="modal__close-button" type="button">
+          <span class="visually-hidden">Закрыть окно.</span>
+        </button>
+        <h2 class="modal__title">Напишите нам</h2>
+        <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы&nbsp;– мы на них ответим!</p>
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+
+          <div class="modal__input-wrapper">
+            <input class="modal__field" type="text" name="name" id="modal-name" required pattern="[а-яА-Яa-zA-Z\s]+">
+            <label class="modal__label" for="modal-name">Имя</label>
+          </div>
+
+          <div class="modal__input-wrapper">
+            <input class="modal__field" type="tel" name="phone" id="modal-phone" required>
+            <label class="modal__label" for="modal-phone">Телефон</label>
+          </div>
+
+
+          <div class="modal__select select select--modal">
+            <label class="modal__label" for="modal-city">Выберите город</label>
+            <input class="modal__field select__field" id="modal-city" name="city" type="text" autocomplete="off"
+              required>
+            <ul class="select__dropdown" id="select-modal">
+              <li class="select__option">&nbsp;</li>
+              <li class="select__option">Москва</li>
+              <li class="select__option">Санкт-Петербург</li>
+              <li class="select__option">Новосибирск</li>
+              <li class="select__option">Екатеренбург</li>
+            </ul>
+          </div>
+
+          <label class="modal__checkbox checkbox checkbox--modal">
+            <input class="checkbox__field visually-hidden" type="checkbox" name="permission" id="permission-modal"
+              required>
+            <span class="checkbox__check"></span>
+            <span class="checkbox__text">Я согласен на обработку моих персональных данных</span>
+          </label>
+
+          <div class="error-message"></div>
+
+          <button class="modal__submit-button button button--light" type="submit">Отправить</button>
+        </form>
+      </div>
+
     </section>
 
     <section class="programs" id="programs" data-test="programs">
       <div class="programs__wrapper">
         <div class="programs__header-wrapper">
-          <h2 class="programs__tittle title">Программы</h2>
+          <h2 class="programs__title title">Программы</h2>
           <a class="programs__button button button--primary button--link" href="#">Все программы</a>
         </div>
         <div class="programs__swiper swiper">
           <ul class="programs__swiper-wrapper swiper-wrapper">
-            <li class="programs__slide swiper-slide">
+            <li class="programs__slide programs__slide--internship swiper-slide">
               <div class="programs__content">
                 <h3 class="programs__content-title">Стажировки</h3>
                 <div class="programs__content-wrapper">
@@ -268,60 +268,60 @@
               </div>
             </li>
 
-            <li class="programs__slide swiper-slide">
+            <li class="programs__slide programs__slide--volunteering swiper-slide">
               <div class="programs__content">
                 <h3 class="programs__content-title">Волонтёрство</h3>
                 <div class="programs__content-wrapper">
-                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
-                  <a class="programs_content-button button button--primary button--programs" href="#">
+                  <p>Помогайте другим и&nbsp;развивайте свои лидерские качества.</p>
+                  <a class="programs__content-button button button--primary button--programs" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
                 </div>
               </div>
             </li>
 
-            <li class="programs__slide swiper-slide">
+            <li class="programs__slide programs__slide--study swiper-slide">
               <div class="programs__content">
                 <h3 class="programs__content-title">Учёба</h3>
                 <div class="programs__content-wrapper">
                   <p>Получите образование и измените своё будущее.</p>
-                  <a class="programs_content-button button button--primary button--programs" href="#">
+                  <a class="programs__content-button button button--primary button--programs" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
                 </div>
               </div>
             </li>
 
-            <li class="programs__slide swiper-slide">
+            <li class="programs__slide programs__slide--internship swiper-slide">
               <div class="programs__content">
                 <h3 class="programs__content-title">Стажировки</h3>
                 <div class="programs__content-wrapper">
                   <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
-                  <a class="programs_content-button button button--primary button--programs" href="#">
+                  <a class="programs__content-button button button--primary button--programs" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
                 </div>
               </div>
             </li>
 
-            <li class="programs__slide swiper-slide">
+            <li class="programs__slide programs__slide--volunteering swiper-slide">
               <div class="programs__content">
                 <h3 class="programs__content-title">Волонтёрство</h3>
                 <div class="programs__content-wrapper">
                   <p>Помогайте другим и развивайте свои лидерские качества.</p>
-                  <a class="programs_content-button button button--primary button--programs" href="#">
+                  <a class="programs__content-button button button--primary button--programs" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
                 </div>
               </div>
             </li>
 
-            <li class="programs__slide swiper-slide">
+            <li class="programs__slide programs__slide--study swiper-slide">
               <div class="programs__content">
                 <h3 class="programs__content-title">Учёба</h3>
                 <div class="programs__content-wrapper">
                   <p>Получите образование и измените своё будущее.</p>
-                  <a class="programs_content-button button button--primary button--programs" href="#">
+                  <a class="programs__content-button button button--primary button--programs" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
                 </div>
@@ -330,17 +330,15 @@
           </ul>
 
           <div class="programs__scrollbar"></div>
-          <div class="programs__swiper-buttons">
-            <button class="programs__swiper-button button button--swiper button--prev programs__swiper-button--prev"
-              type="button" aria-label="Предыдущий слайд.">
-              <!-- <span class="visually-hidden">Предыдущий слайд</span> -->
-            </button>
+        </div>
+        <div class="programs__swiper-buttons">
+          <button class="programs__swiper-button button button--swiper button--prev programs__swiper-button--prev"
+            type="button" aria-label="Предыдущий слайд.">
+          </button>
 
-            <button class="programs__swiper-button button button--swiper button--next programs__swiper-button--next"
-              type="button" aria-label="Следующий слайд.">
-              <!-- <span class="visually-hidden">Следующий слайд</span> -->
-            </button>
-          </div>
+          <button class="programs__swiper-button button button--swiper button--next programs__swiper-button--next"
+            type="button" aria-label="Следующий слайд.">
+          </button>
         </div>
       </div>
     </section>
@@ -351,17 +349,17 @@
           <h2 class="grant__title title">Как поехать</h2>
           <p>Свяжитесь с координатором, чтобы узнать полную информацию.
             Вы получите актуальные сведения о доступных программах
-            и городах, в которых можете пройти программу.</p>
+            и&nbsp;городах, в которых можете пройти программу.</p>
           <div class="grant__img-container"></div>
         </div>
         <div class="grant__requirements">
-          <h3 class="grant__requirements-title">Чтобы получить грант на обучение, вам нужно:</h3>
+          <h3 class="grant__requirements-title">Чтобы получить грант на&nbsp;обучение, вам нужно:</h3>
           <ul class="grant__list">
             <li class="grant__item">Быть в возрасте от 16 до 30 лет</li>
             <li class="grant__item">Иметь оконченное среднее образование</li>
             <li class="grant__item">Иметь документально подтверждённое отсутствие судимости и пройти консульскую
               проверку</li>
-            <li class="grant__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в одной стране</li>
+            <li class="grant__item">За последние 2 года быть не&nbsp;больше 3х месяцев подряд непрерывно в одной стране</li>
           </ul>
         </div>
       </div>
@@ -397,10 +395,10 @@
             <div class="news__swiper-slide news__swiper-slide--interview swiper-slide">
               <div class="news__content">
                 <time class="news__date" datetime="2023-03-23">23/03/2023</time>
-                <h3 class="news__content-title">Интервью с участницей программы стажировки</h3>
+                <h3 class="news__content-title">Интервью с&nbsp;участницей программы стажировки</h3>
                 <div class="news__content-wrapper">
-                  <p>Саша рассказывает, как попала в программу и как прошла
-                    6-месячная стажировка в ISOFound</p>
+                  <p>Саша рассказывает, как&nbsp;попала в&nbsp;программу и&nbsp;как
+                    прошла&nbsp;6-<br>месячная стажировка в ISOFound</p>
                   <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
                 </div>
               </div>
@@ -409,7 +407,7 @@
             <div class="news__swiper-slide news__swiper-slide--travel swiper-slide">
               <div class="news__content">
                 <time class="news__date" datetime="2023-03-20">20/03/2023</time>
-                <h3 class="news__content-title">Путешествуем по миру</h3>
+                <h3 class="news__content-title">Путешествуем по&nbsp;миру</h3>
                 <div class="news__content-wrapper">
                   <p>Какие места посещают наши студенты весной</p>
                   <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
@@ -417,9 +415,9 @@
               </div>
             </div>
 
-            <!--     <div class="news__swiper-slide news__swiper-slide--program swiper-slide">
+            <div class="news__swiper-slide news__swiper-slide--program swiper-slide">
               <div class="news__content">
-                <time datetime="2023-03-17">17/03/2023</time>
+                <time class="news__date" datetime="2023-03-17">17/03/2023</time>
                 <h3 class="news__content-title">Новая программа волонтёрства</h3>
                 <div class="news__content-wrapper">
                   <p>Программа помощи детям длительностью 4 месяца</p>
@@ -430,7 +428,142 @@
 
             <div class="news__swiper-slide news__swiper-slide--career swiper-slide">
               <div class="news__content">
-                <time datetime="2023-03-10">10/03/2023</time>
+                <time class="news__date" datetime="2023-03-10">10/03/2023</time>
+                <h3 class="news__content-title">Построй свою карьеру</h3>
+                <div class="news__content-wrapper">
+                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--interview swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-23">23/03/2023</time>
+                <h3 class="news__content-title">Интервью с&nbsp;участницей программы стажировки</h3>
+                <div class="news__content-wrapper">
+                  <p>Саша рассказывает, как&nbsp;попала в&nbsp;программу и&nbsp;как прошла
+                    6-месячная стажировка в ISOFound</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--travel swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-20">20/03/2023</time>
+                <h3 class="news__content-title">Путешествуем по&nbsp;миру</h3>
+                <div class="news__content-wrapper">
+                  <p>Какие места посещают наши студенты весной</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--program swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                <h3 class="news__content-title">Новая программа волонтёрства</h3>
+                <div class="news__content-wrapper">
+                  <p>Программа помощи детям длительностью 4 месяца</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--career swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-10">10/03/2023</time>
+                <h3 class="news__content-title">Построй свою карьеру</h3>
+                <div class="news__content-wrapper">
+                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--interview swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-23">23/03/2023</time>
+                <h3 class="news__content-title">Интервью с&nbsp;участницей программы стажировки</h3>
+                <div class="news__content-wrapper">
+                  <p>Саша рассказывает, как&nbsp;попала в&nbsp;программу и&nbsp;как прошла
+                    6-месячная стажировка в ISOFound</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--travel swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-20">20/03/2023</time>
+                <h3 class="news__content-title">Путешествуем по&nbsp;миру</h3>
+                <div class="news__content-wrapper">
+                  <p>Какие места посещают наши студенты весной</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--program swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                <h3 class="news__content-title">Новая программа волонтёрства</h3>
+                <div class="news__content-wrapper">
+                  <p>Программа помощи детям длительностью 4 месяца</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--career swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-10">10/03/2023</time>
+                <h3 class="news__content-title">Построй свою карьеру</h3>
+                <div class="news__content-wrapper">
+                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--interview swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-23">23/03/2023</time>
+                <h3 class="news__content-title">Интервью с&nbsp;участницей программы стажировки</h3>
+                <div class="news__content-wrapper">
+                  <p>Саша рассказывает, как&nbsp;попала в&nbsp;программу и&nbsp;как
+                    прошла&nbsp;6-<br>месячная стажировка в ISOFound</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--travel swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-20">20/03/2023</time>
+                <h3 class="news__content-title">Путешествуем по&nbsp;миру</h3>
+                <div class="news__content-wrapper">
+                  <p>Какие места посещают наши студенты весной</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--program swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                <h3 class="news__content-title">Новая программа волонтёрства</h3>
+                <div class="news__content-wrapper">
+                  <p>Программа помощи детям длительностью 4 месяца</p>
+                  <a class="news__content-button button button--light" href="#" aria-label="Узнать подробнее."></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="news__swiper-slide news__swiper-slide--career swiper-slide">
+              <div class="news__content">
+                <time class="news__date" datetime="2023-03-10">10/03/2023</time>
                 <h3 class="news__content-title">Построй свою карьеру</h3>
                 <div class="news__content-wrapper">
                   <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
@@ -439,26 +572,26 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
-            <div class="news__swiper-buttons">
-              <button class="news__swiper-buttons button button--swiper button--prev news__swiper-button--prev"
-                type="button" aria-label="Предыдущий слайд.">
-              </button>
+        <div class="news__swiper-buttons">
+          <button class="news__swiper-button button button--swiper button--prev news__swiper-button--prev" type="button"
+            aria-label="Предыдущий слайд.">
+          </button>
 
-              <button class="news__swiper-buttons button button--swiper button--next news__swiper-button--next"
-                type="button" aria-label="Следующий слайд.">
-              </button>
-            </div>
-            <div class="news__pagination-container">
-              <div class="news__pagination pagination swiper-pagination">
-                <button class="pagination__button pagination__button--active" type="button">1</button>
-                <button class="pagination__button" type="button">2</button>
-                <button class="pagination__button" type="button">3</button>
-                <button class="pagination__button" type="button">4</button>
-              </div>
-            </div>
+          <button class="news__swiper-button button button--swiper button--next news__swiper-button--next" type="button"
+            aria-label="Следующий слайд.">
+          </button>
+        </div>
+        <div class="news__pagination-container">
+          <div class="news__pagination pagination swiper-pagination">
+            <button class="pagination__button pagination__button--active" type="button">1</button>
+            <button class="pagination__button" type="button">2</button>
+            <button class="pagination__button" type="button">3</button>
+            <button class="pagination__button" type="button">4</button>
           </div>
+        </div>
+      </div>
     </section>
 
     <section class="faq" id="faq" data-test="FAQ">
@@ -480,7 +613,7 @@
 
           <li class="faq__item">
             <div class="faq__accordion-question">
-              <h3 class="faq__question-title">Что такое грант на обучение?</h3>
+              <h3 class="faq__question-title">Что такое грант на&nbsp;обучение?</h3>
               <button class="faq__accordion-button button" type="button" aria-label="Показать ответ."></button>
             </div>
 
@@ -497,8 +630,8 @@
             </div>
 
             <div class="faq__accordion-answer">
-              <p>Полная стоимость определяется организаторами в зависимости от направления.
-                В большинстве случаев грант «Стажировка» не покрывает полную стоимость программы,
+              <p>Полная стоимость определяется организаторами в зависимости от&nbsp;направления.
+                В большинстве случаев грант «Стажировка» не&nbsp;покрывает полную стоимость программы,
                 и поэтому предусматривается определённая доля личного участия.</p>
             </div>
           </li>
@@ -506,7 +639,7 @@
           <li class="faq__item">
             <div class="faq__accordion-question">
               <h3 class="faq__question-title">
-                Признаётся ли учёба в рамках проекта для дальнейшего
+                Признаётся ли учёба в&nbsp;рамках проекта для дальнейшего
                 обучения?
               </h3>
               <button class="faq__accordion-button button" type="button" aria-label="Показать ответ."></button>
@@ -585,8 +718,106 @@
                   </div>
                 </div>
                 <div class="review-content">
-                  <h6 class="review-content__title">Я могу с уверенностью сказать, что это былnодин из самых
-                    незабываемых опытов в жизни!</h6>
+                  <h3 class="review-content__title">Я могу с уверенностью сказать, что это был один из самых
+                    незабываемых опытов в&nbsp;жизни!</h3>
+                  <p>
+                    Я рекомендую программу «Стажировка» всем студентам,
+                    желающим&nbsp;получить незабываемые впечатления.&nbsp;Сочетание<br>
+                    путешествий, общения и значимой работы действительно
+                    отличает её&nbsp;от других программ, и&nbsp;я&nbsp;чувствую&nbsp;огромную
+                    благодарность за&nbsp;предоставленную&nbsp;<br>мне&nbsp;возможность.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="reviews__swiper-slide swiper-slide">
+              <div class="review-card">
+                <div class="review-card__header">
+                  <div class="review-author">
+                    <picture class="review-author__avatar">
+
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/avatar-2-tablet@1x.webp 1x,
+                  img/reviews/avatar-2-tablet@2x.webp 2x" width="90" height="90">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/reviews/avatar-2-mobile@1x.webp 1x,
+                  img/reviews/avatar-2-mobile@2x.webp 2x" width="60" height="60">
+
+
+                      <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviews/avatar-2-tablet@1x.jpeg 1x,
+                  img/reviews/avatar-2-tablet@2x.jpeg 2x" width="90" height="90">
+                      <img class="review-author__avatar-img" src="img/reviews/avatar-2-mobile@1x.jpeg"
+                        srcset="img/reviews/avatar-2-mobile@2x.jpeg 2x" alt="Аватарка Давида Иванова" width="60"
+                        height="60">
+
+                    </picture>
+                    <div class="review-author__details">
+                      <span class="reviews__avatar-name">Давид Иванов</span>
+                    </div>
+                  </div>
+
+                  <div class="review-program-info">
+                    <div class="review-program-info__item">
+                      <span class="review-program-info__label">Программа</span>
+                      <span class="review-program-info__value">Volunteer Chance</span>
+                    </div>
+                    <div class="review-program-info__item">
+                      <span class="review-program-info__label">Дата</span>
+                      <span class="review-program-info__value">Лето 2022</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-content">
+                  <h3 class="review-content__title">Благодаря опыту стажировки я узнал так&nbsp;много нового о себе и об
+                    окружающем мире.</h3>
+                  <p>
+                    Каждый день был возможностью оказать ощутимое&nbsp;влияние
+                    на&nbsp;жизнь других людей. Я бы очень рекомендовал
+                    эту&nbsp;волонтёрскую программу всем, кто ищет значимый
+                    и&nbsp;незабываемый опыт. Организация была на высшем
+                    уровне.<br>Для&nbsp;меня было честью быть частью такой удивительной
+                    инициативы.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="reviews__swiper-slide swiper-slide">
+              <div class="review-card">
+                <div class="review-card__header">
+                  <div class="review-author">
+                    <picture class="review-author__avatar">
+
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews/avatar-1-tablet@1x.webp 1x,
+                  img/reviews/avatar-1-tablet@2x.webp 2x" width="90" height="90">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/reviews/avatar-1-mobile@1x.webp 1x,
+                  img/reviews/avatar-1-mobile@2x.webp 2x" width="60" height="60">
+
+
+                      <source type="image/png" media="(min-width: 768px)" srcset="img/reviews/avatar-1-tablet@1x.png 1x,
+                  img/reviews/reviews-tablet-first@2x.png 2x" width="90" height="90">
+                      <img class="review-author__avatar-img" src="img/reviews/avatar-1-mobile@1x.png"
+                        srcset="img/reviews/avatar-1-mobile@2x.png 2x" alt="Фотография Лолы Алекс" width="60"
+                        height="60">
+                    </picture>
+                    <div class="review-author__details">
+                      <span class="reviews__avatar-name">Лола Алекс</span>
+                    </div>
+                  </div>
+
+                  <div class="review-program-info">
+                    <div class="review-program-info__item">
+                      <span class="review-program-info__label">Программа</span>
+                      <span class="review-program-info__value">Masa Art Challenge</span>
+                    </div>
+                    <div class="review-program-info__item">
+                      <span class="review-program-info__label">Дата</span>
+                      <span class="review-program-info__value">Осень 2022</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-content">
+                  <h3 class="review-content__title">Я могу с уверенностью сказать, что это былnодин из самых
+                    незабываемых опытов в жизни!</h3>
                   <p>
                     Я рекомендую программу «Стажировка» всем студентам,
                     желающим получить незабываемые впечатления. Сочетание
@@ -634,83 +865,8 @@
                   </div>
                 </div>
                 <div class="review-content">
-                  <h6 class="review-content__title">Благодаря опыту стажировки я узнал так много нового о себе и об
-                    окружающем мире.</h6>
-                  <p>
-                    Каждый день был возможностью оказать ощутимое влияние
-                    на жизнь других людей. Я бы очень рекомендовал
-                    эту волонтёрскую программу всем, кто ищет значимый
-                    и незабываемый опыт. Организация была на высшем уровне.
-                    Для меня было честью быть частью такой удивительной
-                    инициативы.
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li class="reviews__swiper-slide swiper-slide">
-              <div class="review-card">
-                <div class="review-card__header">
-                  <div class="review-author">
-                    <picture class="review-author__avatar">
-                      <img src="" srcset="" alt="Аватарка Лолы Алекс" width="60" height="60">
-                    </picture>
-                    <div class="review-author__details">
-                      <span class="reviews__avatar-name">Лола Алекс</span>
-                    </div>
-                  </div>
-
-                  <div class="review-program-info">
-                    <div class="review-program-info__item">
-                      <span class="review-program-info__label">Программа</span>
-                      <span class="review-program-info__value">Masa Art Challenge</span>
-                    </div>
-                    <div class="review-program-info__item">
-                      <span class="review-program-info__label">Дата</span>
-                      <span class="review-program-info__value">Осень 2022</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="review-content">
-                  <h6 class="review-content__title">Я могу с уверенностью сказать, что это былnодин из самых
-                    незабываемых опытов в жизни!</h6>
-                  <p>
-                    Я рекомендую программу «Стажировка» всем студентам,
-                    желающим получить незабываемые впечатления. Сочетание
-                    путешествий, общения и значимой работы действительно
-                    отличает её от других программ, и я чувствую огромную
-                    благодарность за предоставленную мне возможность.
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li class="reviews__swiper-slide swiper-slide">
-              <div class="review-card">
-                <div class="review-card__header">
-                  <div class="review-author">
-                    <picture class="review-author__avatar">
-                      <img src="" srcset="" alt="Аватарка Давида Иванова" width="60" height="60">
-                    </picture>
-                    <div class="review-author__details">
-                      <span class="reviews__avatar-name">Давид Иванов</span>
-                    </div>
-                  </div>
-
-                  <div class="review-program-info">
-                    <div class="review-program-info__item">
-                      <span class="review-program-info__label">Программа</span>
-                      <span class="review-program-info__value">Volunteer Chance</span>
-                    </div>
-                    <div class="review-program-info__item">
-                      <span class="review-program-info__label">Дата</span>
-                      <span class="review-program-info__value">Лето 2022</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="review-content">
-                  <h6 class="review-content__title">Благодаря опыту стажировки я узнал так много нового о себе и об
-                    окружающем мире.</h6>
+                  <h3 class="review-content__title">Благодаря опыту стажировки я узнал так много нового о себе и об
+                    окружающем мире.</h3>
                   <p>
                     Каждый день был возможностью оказать ощутимое влияние
                     на жизнь других людей. Я бы очень рекомендовал
@@ -723,14 +879,14 @@
               </div>
             </li>
           </ul>
-          <div class="review__scrollbar"></div>
+          <div class="reviews__swiper-scrollbar"></div>
         </div>
         <div class="reviews__swiper-buttons">
-          <button class="review__swiper-button button button--swiper button--prev reviews__swiper-button--prev"
+          <button class="reviews__swiper-button button button--swiper button--prev reviews__swiper-button--prev"
             type="button" aria-label="Предыдущий слайд.">
           </button>
 
-          <button class="review__swiper-button button button--swiper button--next reviews__swiper-button--next"
+          <button class="reviews__swiper-button button button--swiper button--next reviews__swiper-button--next"
             type="button" aria-label="Следующий слайд.">
           </button>
         </div>
@@ -754,7 +910,7 @@
 
             <li class="contacts__item">
               <span class="contacts__heading">EMAIL</span>
-              <a class="contacts__description contacts__link" href="Info@stazh.ru">Info@stazh.ru</a>
+              <a class="contacts__description contacts__link" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
             </li>
           </ul>
         </div>
@@ -783,37 +939,33 @@
         <form class="form__form-container" action="https://echo.htmlacademy.ru" method="post">
           <div class="form__header-wrapper">
             <h3 class="form__title">Напишите нам</h3>
-            <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+            <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы&nbsp;— мы на них ответим!
+            </p>
           </div>
 
           <div class="form__input-wrapper">
-            <label class="form__label">
-              Имя
-              <input class="form__field" type="text" name="name" required aria-labelledby="form-name-label">
-            </label>
+            <input class="form__field" type="text" name="name" required id="name" pattern="[а-яА-Яa-zA-Z\s]+">
+            <label class="form__label" for="name">
+              Имя</label>
           </div>
 
           <div class="form__input-wrapper">
-            <label class="form__label">
-              Телефон
-              <input class="form__field" type="tel" name="phone" required aria-labelledby="form-phone-label">
-            </label>
+            <input class="form__field" type="tel" name="phone" required id="phone">
+            <label class="form__label" for="phone">
+              Телефон</label>
           </div>
 
           <div class="form__input-wrapper">
-            <label class="form__label">
-              Ваше сообщение
-              <textarea class="form__field form__field--textarea" name="message" required
-                aria-labelledby="form-message-label"></textarea>
-            </label>
+            <textarea class="form__field  form__field--textarea" name="message" required id="message"></textarea>
+            <label class="form__label" for="message">
+              Ваше сообщение</label>
           </div>
 
           <div class="form__select select select--form">
             <label class="form__label" for="form-city">
               Выберите город
             </label>
-            <input class="form__field select__field" id="form-city" name="city" type="text" autocomplete="off" required
-              aria-labelledby="form-city-label">
+            <input class="form__field select__field" id="form-city" name="city" type="text" autocomplete="off" required>
             <ul class="select__dropdown" id="select-form">
               <li class="select__option">&nbsp;</li>
               <li class="select__option">Москва</li>
@@ -824,10 +976,10 @@
           </div>
 
           <label class="form__checkbox checkbox checkbox--form">
-            <input class="checkbox__field visually-hidden" type="checkbox" name="user-agreement" aria-label="Согласие на обработку персональных данных."
+            <input class="checkbox__field visually-hidden" type="checkbox" name="user-agreement" id="permission-form"
               required>
             <span class="checkbox__check"></span>
-            <span class="checkbox__text">Я согласен на обработку моих персональных данных</span>
+            <span class="checkbox__text">Я согласен на обработку моих персональных<br> данных</span>
           </label>
 
           <button class="form__submit-button button button--blue" type="submit">Отправить</button>

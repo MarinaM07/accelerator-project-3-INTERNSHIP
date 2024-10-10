@@ -1,0 +1,6 @@
+.is-error .form__field:invalid,
+.is-error .modal__field:invalid,
+.is-error .checkbox__field:invalid + .checkbox__check {
+  border-color: rgba($color-pastel-red, 0.7);
+  background-color: rgba($color-pastel-red, 0.2);
+}

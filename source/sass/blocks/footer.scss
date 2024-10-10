@@ -1,13 +1,14 @@
 .footer {
   width: 286px;
-  margin: 0 auto;
-  padding: 38px 15px 40px 17px;
-  word-break: break-word;
   min-height: 80px;
+  margin: 0 auto;
+  padding: 39px 16px 40px;
+
+  word-break: break-word;
 
   @media (min-width: $tablet-width) {
     width: 678px;
-    padding: 38px 45px 39px;
+    padding: 39px 45px 38.2px;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,23 +28,22 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 52px 840px 298px;
     gap: 25px;
+    grid-template-columns: 52px 840px 298px;
   }
 }
 
 .footer__logo {
   display: flex;
-  align-items: center;
   justify-content: center;
-
+  align-items: center;
   width: 52px;
   height: 52px;
   margin: 0 auto;
   padding-top: 1px;
 
-  border-radius: 50%;
   background-color: $color-default-white;
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -59,9 +59,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   padding: 0;
   padding-top: 15px;
 
@@ -70,40 +69,35 @@
   gap: 10px 30.5px;
 
   @media (min-width: $tablet-width) {
-    align-content: center;
     justify-content: end;
-
+    align-content: center;
     margin: 0;
     padding: 0;
     padding-top: 2px;
 
-    grid-column: 2 / -1;
     gap: 15.6px;
+    grid-column: 2 / -1;
   }
 
   @media (min-width: $desktop-width) {
     justify-content: start;
-
     padding: 0;
     padding-left: 27px;
 
-    grid-column: 2/3;
     gap: 30.5px;
+    grid-column: 2/3;
   }
 }
 
 .footer__nav-link {
-  font-size: 14px;
-  font-weight: $regular;
-  line-height: 20px;
-
   display: block;
-
   padding: 5px 0;
 
-  text-decoration: none;
-
+  font-weight: $regular;
+  font-size: 14px;
+  line-height: 20px;
   color: $color-alcro-anis;
+  text-decoration: none;
 
   &:hover {
     color: rgba($color-yinmn-blue, 0.7);
@@ -111,6 +105,7 @@
 
   &:focus-visible {
     color: $color-yinmn-blue;
+
     outline: none;
   }
 
@@ -119,19 +114,18 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 16px;
-
     padding: 15px 0;
+
+    font-size: 16px;
   }
 }
 
 .footer__inner {
   display: flex;
   flex-direction: column;
-
   margin-bottom: 15px;
 
-  row-gap: 10px;
+  row-gap: 11px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -153,7 +147,6 @@
 .footer__policy {
   display: flex;
   justify-content: center;
-
   margin: 0;
 
   @media (min-width: $tablet-width) {
@@ -166,17 +159,15 @@
 }
 
 .footer__policy-link {
-  font-size: 12px;
-  font-weight: $regular;
-  line-height: 14px;
-
   display: inline-block;
-
   padding-bottom: 1.3px;
 
+  font-weight: $regular;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-alcro-anis;
   text-decoration: none;
 
-  color: $color-alcro-anis;
   border-bottom: 1px solid;
 
   &:hover {
@@ -185,6 +176,7 @@
 
   &:focus-visible {
     color: $color-yinmn-blue;
+
     outline: none;
   }
 
@@ -193,26 +185,25 @@
   }
 
   @media (min-width: $tablet-width) {
-    line-height: 12px;
-
     padding-bottom: 1.5px;
+
+    line-height: 12px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 2px;
+
     font-size: 14px;
     line-height: 18px;
-
-    padding-bottom: 2px;
   }
 }
 
 .footer__copyright {
-  font-size: 12px;
-  font-weight: $regular;
-  line-height: 14px;
-
   margin: 0;
 
+  font-weight: $regular;
+  font-size: 12px;
+  line-height: 14px;
   color: rgba($color-alcro-anis, 0.6);
 
   @media (min-width: $tablet-width) {
@@ -220,11 +211,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 14px;
-    line-height: 18px;
-
     padding-top: 1px;
 
+    font-size: 14px;
+    line-height: 18px;
     color: $color-alcro-anis;
   }
 }
@@ -233,14 +223,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   margin: 0;
   padding: 0;
 
   list-style: none;
 
-  grid-column: 3/-1;
   gap: 10px;
+  grid-column: 3/-1;
 
   @media (min-width: $tablet-width) {
     justify-content: end;
@@ -249,32 +238,31 @@
   @media (min-width: $desktop-width) {
     align-items: center;
 
-    grid-row: 1/2;
     gap: 20px;
+    grid-row: 1/2;
   }
 }
 
 .footer__social-link {
   display: flex;
-  align-items: center;
   justify-content: center;
-
+  align-items: center;
   width: 26px;
   height: 26px;
 
-  border-radius: 50%;
   background-color: $color-yinmn-blue;
+  border-radius: 50%;
 
   &::before {
+    content: "";
+
     width: 12px;
     height: 12px;
 
-    content: "";
-
     background-color: $color-default-white;
 
-    mask-repeat: no-repeat;
     mask-position: center;
+    mask-repeat: no-repeat;
     mask-size: contain;
   }
 
@@ -285,8 +273,8 @@
   }
 
   &:focus-visible {
-    outline: none;
     background-color: $color-default-white;
+    outline: none;
 
     &::before {
       background-color: $color-yinmn-blue;

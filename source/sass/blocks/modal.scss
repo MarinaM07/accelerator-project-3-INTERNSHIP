@@ -2,20 +2,23 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.6);
-  z-index: 2;
+  z-index: 3;
+
   display: flex;
   flex-direction: column;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-
   width: 260px;
   margin: 0 auto;
   padding: 38px 15px 40px;
-  border-radius: 16px;
+
   background-color: $color-default-white;
+  border-radius: 16px;
+  transform: translate(-50%, -50%) scale(0.6);
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+  pointer-events: none;
 
   @media (min-width: $tablet-width) {
     width: 350px;
@@ -28,11 +31,13 @@
 }
 
 .modal.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
   min-height: 450px;
+
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  opacity: 1;
+
+  pointer-events: auto;
 
   @media (min-width: $tablet-width) {
     min-height: 525px;
@@ -44,48 +49,47 @@
 }
 
 .modal__title {
-  font-size: 18px;
-  font-weight: $regular;
-  line-height: 18px;
-
   margin: 0;
-
-  text-align: center;
-
-  color: v;
   padding-bottom: 11px;
 
+  font-weight: $regular;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: v;
+
   @media (min-width: $tablet-width) {
+    padding-bottom: 17px;
+
     font-size: 28px;
     line-height: 28px;
-    padding-bottom: 17px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 14px;
+
     font-size: 32px;
     line-height: 36px;
-
-    padding-bottom: 14px;
   }
 }
 
 .modal__description {
-  font-size: 14px;
-  font-weight: $regular;
-  line-height: 20px;
-
+  width: 200px;
   margin: 0 auto;
 
+  font-weight: $regular;
+  font-size: 14px;
+  line-height: 20px;
   text-align: center;
-  width: 200px;
 
   span {
     white-space: nowrap;
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 16px;
     width: auto;
+
+    font-size: 16px;
 
     span {
       white-space: wrap;
@@ -93,9 +97,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    line-height: 26px;
-
     width: 350px;
+
+    line-height: 26px;
   }
 }
 
@@ -103,10 +107,9 @@
 .modal__form {
   display: flex;
   flex-direction: column;
-
+  width: 260px;
   margin: 0 auto;
   padding-top: 26px;
-  width: 260px;
 
   @media (min-width: $tablet-width) {
     width: 350px;
@@ -118,16 +121,17 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  cursor: pointer;
+
   width: 16px;
   height: 16px;
   padding: 0;
 
-  border: none;
   background-color: transparent;
   background-image: url("/__spritemap#sprite-cross-view");
   background-repeat: no-repeat;
   background-position: center;
+  border: none;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     top: 30px;
@@ -140,21 +144,23 @@
 
 .modal__field {
   height: 40px;
+  margin-top: 8px;
+  margin-bottom: 15px;
   padding-left: 25px;
+
   border: 1px solid rgba($color-alcro-anis, 0.3);
   border-radius: 8px;
   outline: none;
-  margin-bottom: 15px;
-  margin-top: 8px;
 
   @media (min-width: $tablet-width) {
     height: 46px;
-    margin-bottom: 20px;
     margin-top: 12px;
+    margin-bottom: 20px;
   }
 }
 
 .modal__field.select__field {
+  margin-top: 15px;
   margin-bottom: 0;
 
   @media (min-width: $desktop-width) {
@@ -171,11 +177,13 @@
 }
 
 .modal__label {
-  font-size: 14px;
-  font-weight: $regular;
-  line-height: 14px;
   display: flex;
   flex-direction: column-reverse;
+
+  font-weight: $regular;
+  font-size: 14px;
+  line-height: 14px;
+
   opacity: 0.8;
 
   @media (min-width: $tablet-width) {
@@ -190,6 +198,7 @@
 .modal__field:disabled {
   background-color: rgba($color-dark-gray, 0.2);
   border-color: rgba($color-dark-gray, 0.5);
+
   user-select: none;
 }
 
@@ -198,42 +207,40 @@
 }
 
 .modal__submit-button {
-  font-size: 12px;
-  font-weight: $medium;
-  line-height: 12px;
-
   position: relative;
 
+  margin-top: 26px;
   padding: 13px 58px 14.5px 20px;
 
-  letter-spacing: 0.28px;
-  text-transform: uppercase;
-
+  font-weight: $medium;
+  font-size: 12px;
+  line-height: 12px;
   color: $color-yinmn-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.28px;
+
+  background-color: $color-default-white;
   border: 1px solid $color-yinmn-blue;
   border-radius: 30px;
-  background-color: $color-default-white;
-  margin-top: 26px;
 
   @media (min-width: $tablet-width) {
-    font-size: 14px;
-    line-height: 14px;
-
     display: inline-block;
-
-    padding: 19px 79px 20px 30px;
     width: 195px;
     margin: 0 auto;
     margin-top: 34px;
+    padding: 19px 79px 20px 30px;
+
+    font-size: 14px;
+    line-height: 14px;
   }
 
   @media (min-width: $desktop-width) {
     width: 194px;
-
     padding: 19px 77px 19px 27px;
   }
 
   &::before {
+    content: "";
     position: absolute;
     top: 2px;
     right: 4px;
@@ -241,10 +248,8 @@
     width: 34px;
     height: 34px;
 
-    content: "";
-
-    border-radius: 44px;
     background-color: $color-yinmn-blue;
+    border-radius: 44px;
 
     @media (min-width: $tablet-width) {
       top: 3px;
@@ -256,6 +261,7 @@
   }
 
   &::after {
+    content: "";
     position: absolute;
     top: 14px;
     right: 16px;
@@ -263,9 +269,8 @@
     width: 9px;
     height: 9px;
 
-    content: "";
-
     background-color: $color-default-white;
+    transform: rotate(-45deg);
 
     mask-image: url("/__spritemap#sprite-arrow-view");
     mask-repeat: no-repeat;
@@ -284,4 +289,10 @@
 .modal__input-wrapper {
   display: flex;
   flex-direction: column-reverse;
+}
+
+.overlay.is-open-modal {
+  display: block;
+
+  opacity: 1;
 }

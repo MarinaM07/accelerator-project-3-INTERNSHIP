@@ -1,19 +1,21 @@
 .programs__wrapper {
   position: relative;
-  word-break: break-word;
-  margin: 0 auto;
-  padding: 55px 15px 50px;
+
   max-width: 290px;
   min-height: 500px;
+  margin: 0 auto;
+  padding: 55px 15px 50px;
+
+  word-break: break-word;
 
   @media (min-width: $tablet-width) {
-    padding: 50px 0 50px 45px;
     max-width: 723px;
+    padding: 50px 0 50px 45px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 62px 100px 60px;
     max-width: 1240px;
+    padding: 62px 100px 60px;
   }
 }
 
@@ -32,8 +34,8 @@
 
 .programs__title {
   @media (min-width: $tablet-width) {
-    padding-top: 3px;
     max-width: 400px;
+    padding-top: 3px;
   }
 
   @media (min-width: $desktop-width) {
@@ -42,35 +44,35 @@
 }
 
 .programs__button {
-  font-size: 12px;
-  font-weight: $medium;
-  line-height: 12px;
-
   position: absolute;
-  bottom: 48px;
+  bottom: 50.5px;
   left: 15px;
-  height: max-content;
-  padding: 16px 68px 14px 30px;
 
-  letter-spacing: 0.28px;
+  height: max-content;
+  padding: 15px 68px 15px 30px;
+
+  font-weight: $medium;
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-yinmn-blue;
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 0.28px;
 
-  color: $color-yinmn-blue;
+  background-color: transparent;
   border: 1px solid $color-yinmn-blue;
   border-radius: 30px;
-  background-color: transparent;
 
   @media (min-width: $tablet-width) {
-    font-size: 14px;
-    line-height: 14px;
-
     position: relative;
     bottom: 0;
     left: 0;
-    display: inline-block;
 
-    padding: 19px 80px 21px 30px;
+    display: inline-block;
+    padding: 20px 80px 20px 30px;
+
+    font-size: 14px;
+    line-height: 14px;
   }
 
   @media (min-width: $desktop-width) {
@@ -78,6 +80,7 @@
   }
 
   &::before {
+    content: "";
     position: absolute;
     top: 4px;
     right: 4px;
@@ -85,10 +88,8 @@
     width: 34px;
     height: 34px;
 
-    content: "";
-
-    border-radius: 44px;
     background-color: $color-yinmn-blue;
+    border-radius: 44px;
 
     @media (min-width: $tablet-width) {
       top: 4px;
@@ -105,14 +106,13 @@
   }
 
   &::after {
-    position: absolute;
-    top: 17px;
-    right: 17px;
-
-    width: 8px;
-    height: 8px;
-
     content: "";
+    position: absolute;
+    top: 16px;
+    right: 15.5px;
+
+    width: 9px;
+    height: 9px;
 
     background-color: $color-default-white;
     transform: rotate(-45deg);
@@ -122,8 +122,8 @@
     mask-size: cover;
 
     @media (min-width: $tablet-width) {
-      top: 23px;
-      right: 23px;
+      top: 22px;
+      right: 22px;
     }
   }
 }
@@ -142,7 +142,7 @@
   margin: 0;
   padding: 0;
   padding-top: 35px;
-  padding-bottom: 72px;
+  padding-bottom: 74px;
 
   list-style: none;
 
@@ -157,13 +157,17 @@
   }
 }
 
+
 .programs__slide.swiper-slide {
   position: relative;
-  background-size: cover;
+
   max-width: 324px;
-  min-height: 400px;
   height: auto;
+  min-height: 400px;
+
+  background-size: cover;
   border-radius: 12px;
+  transform: none;
 
   @media (min-width: $tablet-width) {
     max-width: 324px;
@@ -175,32 +179,10 @@
     min-height: 386px;
     padding: 17px 20px;
   }
-
-  &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    width: 290px;
-
-    content: "";
-
-    border-radius: 12px;
-    background-color: $color-yinmn-blue;
-
-    @media (min-width: $tablet-width) {
-      width: 324px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 392px;
-    }
-  }
 }
 
-li.programs__slide:nth-child(3n-2) {
+.programs__slide--internship {
+  background-color: $color-yinmn-blue;
   background-image: image-set(url("../img/programs/slide-1-mobile@2x.webp") type("image/webp") 2x, url("../img/programs/slide-1-mobile@1x.webp") type("image/webp") 1x, url("../img/programs/slide-1-mobile@2x.jpg") type("image/jpg") 2x, url("../img/programs/slide-1-mobile@1x.jpg") type("image/jpg") 1x);
   background-repeat: no-repeat;
 
@@ -213,7 +195,8 @@ li.programs__slide:nth-child(3n-2) {
   }
 }
 
-li.programs__slide:nth-child(3n-1) {
+.programs__slide--volunteering {
+  background-color: $color-yinmn-blue;
   background-image: image-set(url("../img/programs/slide-2-mobile@2x.webp") type("image/webp") 2x, url("../img/programs/slide-2-mobile@1x.webp") type("image/webp") 1x, url("../img/programs/slide-2-mobile@2x.jpg") type("image/jpg") 2x, url("../img/programs/slide-2-mobile@1x.jpg") type("image/jpg") 1x);
   background-repeat: no-repeat;
 
@@ -226,7 +209,8 @@ li.programs__slide:nth-child(3n-1) {
   }
 }
 
-li.programs__slide:nth-child(3n-0) {
+.programs__slide--study {
+  background-color: $color-yinmn-blue;
   background-image: image-set(url("../img/programs/slide-3-mobile@2x.webp") type("image/webp") 2x, url("../img/programs/slide-3-mobile@1x.webp") type("image/webp") 1x, url("../img/programs/slide-3-mobile@2x.jpg") type("image/jpg") 2x, url("../img/programs/slide-3-mobile@1x.jpg") type("image/jpg") 1x);
   background-repeat: no-repeat;
 
@@ -249,50 +233,50 @@ li.programs__slide:nth-child(3n-0) {
     }
 
     @media (min-width: $desktop-width) {
-      padding: 21px 18px 25px;
+      padding: 22px 18px 25px;
     }
   }
 }
 
 .programs__content {
-  margin: 0 auto;
   max-width: 270px;
+  margin: 0 auto;
   padding-top: 271px;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
 
   @media (min-width: $tablet-width) {
+    max-width: 284px;
     padding-top: 285px;
     padding-bottom: 10px;
-    max-width: 284px;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 320px;
     margin: 0;
     padding: 0;
     padding-top: 263px;
-    max-width: 320px;
   }
 }
 
 .programs__content-wrapper {
   display: flex;
   align-items: center;
-
   padding: 12px 18px 15px;
 
-  border-radius: 0 12px 12px;
   background-color: $color-default-white;
+  border-radius: 0 12px 12px;
 
   gap: 16px;
 
   @media (min-width: $tablet-width) {
-    padding: 11px 18px 16px;
+    padding: 12px 18px 15px;
+
     gap: 22px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 12px 18px 16px;
     max-width: 285px;
+    padding: 13px 18px 16px;
   }
 
   span {
@@ -307,45 +291,44 @@ li.programs__slide:nth-child(3n-0) {
 }
 
 .programs__content-title {
-  font-size: 16px;
-  font-weight: $regular;
-  line-height: 18px;
-
   position: relative;
 
   width: 122px;
   margin: 0;
   padding: 18px 6px 6px 18px;
 
+  font-weight: $regular;
+  font-size: 16px;
+  line-height: 18px;
   color: $color-yinmn-blue;
-  border-radius: 12px 12px 0 0;
+
   background-color: $color-default-white;
+  border-radius: 12px 12px 0 0;
 
   @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 14px;
-
     width: 149px;
     padding: 18px 6px 6px 18px;
+
+    font-size: 20px;
+    line-height: 14px;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 24px;
-    line-height: 17px;
-
     width: 170px;
     padding: 18px 6px 6px 18px;
+
+    font-size: 24px;
+    line-height: 17px;
   }
 
   &::after {
+    content: "";
     position: absolute;
     right: -20px;
     bottom: 0;
 
     width: 20px;
     height: 20px;
-
-    content: "";
 
     background-color: $color-default-white;
 
@@ -356,63 +339,71 @@ li.programs__slide:nth-child(3n-0) {
 }
 
 .programs__content-wrapper p {
-  font-size: 12px;
-  font-weight: $regular;
-  line-height: 14px;
-
   width: 188px;
   margin: 0;
+
+  font-weight: $regular;
+  font-size: 12px;
+  line-height: 14px;
 
   background-color: $color-default-white;
 
   @media (min-width: $tablet-width) {
+    width: 196px;
+
     font-size: 14px;
     line-height: 20px;
-
-    width: 196px;
   }
 
   @media (min-width: $desktop-width) {
-    line-height: 18px;
-
     width: 239px;
+
+    line-height: 18px;
   }
 }
 
 .programs__content-button {
-  outline: none;
   position: relative;
 
+  outline: none;
+
   &::before {
+    content: "";
     position: absolute;
 
     width: 30px;
     height: 30px;
-    transform: translate(0, -50%);
 
-    content: "";
-
-    border-radius: 44px;
     background-color: $color-yinmn-blue;
+    border-radius: 44px;
+    transform: translate(0, -50%);
 
     @media (min-width: $desktop-width) {
       outline: thin;
+      right: -24px;
     }
   }
 
   &::after {
-    position: absolute;
-    transform: translate(140%, -50%) rotate(-45deg);
-    width: 8px;
-    height: 8px;
-
     content: "";
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
 
     background-color: $color-default-white;
+    transform: translate(125%, -55%) rotate(-45deg);
 
     mask-image: url("/__spritemap#sprite-arrow-view");
     mask-repeat: no-repeat;
     mask-size: cover;
+
+    @media (min-width: $desktop-width) {
+      width: 10px;
+      height: 10px;
+      top: 1px;
+      right: -1px;
+    }
   }
 }
 
@@ -423,14 +414,12 @@ li.programs__slide:nth-child(3n-0) {
     position: relative;
 
     display: block;
-
     width: 560px;
     height: 2px;
     padding: 10.9px 0 10px;
 
-    cursor: pointer;
-
     background-color: transparent;
+    cursor: pointer;
   }
 
   @media (min-width: $desktop-width) {
@@ -438,6 +427,7 @@ li.programs__slide:nth-child(3n-0) {
   }
 
   &::before {
+    content: "";
     position: absolute;
     top: 53%;
     right: 0;
@@ -445,10 +435,8 @@ li.programs__slide:nth-child(3n-0) {
 
     height: 2px;
 
-    content: "";
-    transform: translateY(-50%);
-
     background-color: $color-yinmn-blue;
+    transform: translateY(-50%);
   }
 
   .swiper-scrollbar-drag {
@@ -467,18 +455,19 @@ li.programs__slide:nth-child(3n-0) {
 
 .programs__swiper-buttons {
   position: absolute;
+  top: 53px;
+  right: 15px;
   z-index: 1;
 
   display: flex;
 
-  top: 53px;
-  right: 15px;
   gap: 8px;
 
   @media (min-width: $tablet-width) {
     top: auto;
     right: 45px;
     bottom: 51px;
+
     gap: 10px;
   }
 

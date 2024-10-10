@@ -1,49 +1,57 @@
 .pagination {
   display: flex;
   flex-wrap: wrap;
+
   gap: 16px;
 }
 
 .pagination__button,
 .pagination__button.swiper-pagination-bullet,
 .swiper-pagination-bullets-dynamic .pagination__button.swiper-pagination-bullet {
-  min-width: 26px;
-  height: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 26px;
+  height: 26px;
+
+  font-weight: $regular;
   font-size: 14px;
   line-height: 14px;
-  font-weight: $regular;
   color: rgba(49, 109, 194, 0.5);
+
   background: transparent;
   border: 2px solid transparent;
   border-radius: 20px;
-  cursor: pointer;
-  appearance: none;
   transform: scale(1);
+  cursor: pointer;
   opacity: 1;
+
+  appearance: none;
 
 
   &--active {
     color: $color-default-white;
+
     background-color: $color-yinmn-blue;
   }
 
   &:hover {
     color: $color-yinmn-blue;
+
     background-color: transparent;
     border-color: $color-yinmn-blue;
   }
 
   &:focus-visible {
     color: $color-yinmn-blue;
+
     background-color: $color-default-white;
     border-color: $color-yinmn-blue;
   }
 
   &:active {
     color: $color-default-white;
+
     background-color: $color-medium-sapphire;
     border-color: $color-medium-sapphire;
   }
@@ -59,6 +67,7 @@
   .swiper-pagination-bullets-dynamic .pagination__button.swiper-pagination-bullet {
     min-width: 32px;
     height: 32px;
+
     font-size: 16px;
     line-height: 20px;
   }
