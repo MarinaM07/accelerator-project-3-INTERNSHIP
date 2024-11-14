@@ -1,10 +1,11 @@
 (function () {
-  const headerButton = document.querySelector('.header__button');
-  const headerNav = document.querySelector('.header__nav');
-  const headerMenuWrapper = document.querySelector('.header__menu-wrapper');
+  const headerWrapper = document.querySelector ('.header__wrapper');
+  const headerButton = headerWrapper.querySelector('.header__button');
+  const headerNav = headerWrapper.querySelector('.header__nav');
+  const headerMenuWrapper = headerWrapper.querySelector('.header__menu-wrapper');
   const pageBody = document.querySelector('.page-body');
-  const headerLinks = document.querySelectorAll('.header__link');
-  const headerLogo = document.querySelector('.header__logo');
+  const headerLinks = headerWrapper.querySelectorAll('.header__link');
+  const headerLogo = headerWrapper.querySelector('.header__logo');
   const menuBackdrop = document.querySelector('.overlay');
   const modal = document.querySelector('.modal');
 
@@ -17,6 +18,11 @@
     headerMenuWrapper.setAttribute('aria-hidden', String(!isOpen));
     headerLinks.forEach((link) => link.setAttribute('tabindex', isOpen ? '0' : '-1'));
     menuBackdrop.classList.toggle('is-open-menu', isOpen);
+
+    if (window.matchMedia('(min-width: 321px)').matches) {
+      headerWrapper.style.justifyContent = isOpen ? 'flex-end' : 'space-between';
+    }
+
     if (!modal.classList.contains('is-open')) {
       window.scrollTo({ top: window.scrollY, behavior: 'instant' });
     }

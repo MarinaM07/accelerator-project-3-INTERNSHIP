@@ -1,7 +1,8 @@
 .faq__wrapper {
   max-width: 290px;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 50.5px 0;
+  padding-bottom: 51px;
 
   word-break: break-word;
 
@@ -12,16 +13,22 @@
 
   @media (min-width: $desktop-width) {
     max-width: 1028px;
-    padding: 60px 0 60px;
+    padding: 60px 0;
+    padding-bottom: 61px;
   }
 }
 
 .faq__title {
   margin: 0 auto;
+  padding: 0 60px 0 58px;
   overflow: hidden;
   white-space: nowrap;
 
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 
   @media (min-width: $desktop-width) {
     padding-top: 11px;
@@ -47,6 +54,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 71px;
+    gap: 10.5px;
   }
 }
 
@@ -129,7 +137,7 @@
   transition: background-color 0.3s ease;
 
   &:nth-child(4n) {
-    padding: 20px 17px 20px 15px;
+    padding: 21px 17px 20px 15px;
   }
 
   &:nth-child(4n) .faq__accordion-button {
@@ -137,7 +145,7 @@
   }
 
   &:nth-child(5n) {
-    padding: 21px 17px 20px 15px;
+    padding: 20px 17px 19px 15px;
   }
 
   &:nth-child(5n) .faq__accordion-button {
@@ -187,7 +195,7 @@
     }
 
     &:nth-child(5n) {
-      padding: 41px 42px 39px 40px;
+      padding: 42px 42px 39px 40px;
     }
 
     &:nth-child(5n) .faq__accordion-button {

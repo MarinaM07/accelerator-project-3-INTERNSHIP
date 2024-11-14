@@ -4,11 +4,11 @@
   max-width: 290px;
   min-height: 500px;
   margin: 0 auto;
-  padding: 55px 15px 35px;
+  padding: 55px 15px 29.5px;
 
   @media (min-width: $tablet-width) {
     max-width: 723px;
-    padding: 50px 0 50px 45px;
+    padding: 50.5px 0 50px 45px
   }
 
   @media (min-width: $desktop-width) {
@@ -35,56 +35,58 @@
 
 .reviews__swiper-wrapper {
   padding: 0;
-  padding-top: 19px;
+  padding-top: 35px;
+  margin: 0;
 
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    padding-top: 24px;
-    padding-bottom: 23px;
+    padding: 40px 0 39.5px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 29px;
-    padding-bottom: 23px;
+    padding: 45px 0;
+    padding-bottom: 39px;
   }
 }
 
 .reviews__swiper-slide.swiper-slide {
   max-width: 245px;
-  height: auto;
   min-height: 386px;
   padding: 30px 26px 30px 15px;
 
   border: 2px solid $color-yinmn-blue;
   border-radius: 16px;
 
+
   @media (min-width: $tablet-width) {
-    max-width: 461px;
-    min-height: 311px;
-    padding: 50px 45px 26px 50px;
+    max-width: 456px;
+    min-height: 313px;
+    padding: 51px 50px 48.5px 50.5px;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 505px;
+    max-width: 501px;
     min-height: 379px;
-    padding: 50px 45px 50px 50px;
+    padding: 49.5px 50px;
+    padding-top: 51px;
   }
 }
 
 .review-card p {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
+    font-size: 16px;
+
     br {
       display: none;
     }
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 16px;
     line-height: 26px;
 
     br {
@@ -98,22 +100,23 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding-right: 2px;
+  padding-right: 1px;
   padding-bottom: 12.5px;
 
-  gap: 15px;
+  gap: 16px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     align-items: center;
-    padding-right: 6px;
-    padding-bottom: 31px;
+    padding-bottom: 30px;
 
     gap: 14px;
   }
 
   @media (min-width: $desktop-width) {
+    min-width: 503px;
     padding-right: 2px;
+    padding-bottom: 29px;
 
     gap: 36px;
   }
@@ -131,7 +134,7 @@
   gap: 10px;
 
   @media (min-width: $tablet-width) {
-    gap: 15px;
+    gap: 14.5px;
   }
 }
 
@@ -156,12 +159,11 @@
 
 .review-program-info {
   display: flex;
-  padding-bottom: 13px;
+  padding-bottom: 12px;
 
   gap: 26px;
 
   @media (min-width: $tablet-width) {
-    gap: 25px;
     padding-bottom: 11px;
   }
 }
@@ -183,7 +185,11 @@
   letter-spacing: 0.12px;
 
   @media (min-width: $tablet-width) {
-    padding: 12px 0;
+    padding: 9.5px 0 11px
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 10px 0 ;
   }
 }
 
@@ -218,7 +224,7 @@
   color: $color-yinmn-blue;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 24.5px;
+    padding-bottom: 24px;
 
     font-size: 20px;
     line-height: 24px;
@@ -227,6 +233,7 @@
   @media (min-width: $desktop-width) {
     font-size: 24px;
     line-height: 26px;
+    padding-bottom: 25.5px;
   }
 }
 

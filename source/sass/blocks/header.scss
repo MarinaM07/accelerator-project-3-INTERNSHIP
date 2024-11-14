@@ -1,6 +1,22 @@
 .header {
   position: absolute;
   width: 100%;
+  max-width: 320px;
+  left: 50%;
+  top: 47px;
+  transform: translate(-50%, -50%);
+
+  z-index: 3;
+
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+    top: 73px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    top: 73px;
+  }
 }
 
 .header__wrapper {

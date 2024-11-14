@@ -7,19 +7,20 @@
   word-break: break-word;
 
   @media (min-width: $tablet-width) {
-    padding: 50.5px 45px 50px 45px;
+    padding: 50.5px 45px 50px 44.5px
   }
 
   @media (min-width: $desktop-width) {
     padding: 60px 100px;
+    padding-bottom: 59.4px;
   }
 }
 
 .form__wrapper {
-  padding: 43px 0 41px;
+  padding: 43px 0 40px;
 
   background-color: $color-dark-gray;
-  background-image: image-set(url("../img/form/form-background-mobile@2x.webp") type("image/webp") 2x, url("../img/form/form-background-mobile@1x.webp") type("image/webp") 1x, url("../img/form/form-background-mobile@2x.jpg") type("image/jpg") 2x, url("../img/form/form-background-mobile@1x.jpg") type("image/jpg") 1x);
+  background-image: image-set(url("/img/form/form-background-mobile@2x.webp") type("image/webp") 2x, url("/img/form/form-background-mobile@1x.webp") type("image/webp") 1x, url("/img/form/form-background-mobile@2x.jpg") type("image/jpg") 2x, url("/img/form/form-background-mobile@1x.jpg") type("image/jpg") 1x);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -28,13 +29,13 @@
     margin: 0 auto;
     padding: 0;
 
-    background-image: image-set(url("../img/form/form-background-tablet@2x.webp") type("image/webp") 2x, url("../img/form/form-background-tablet@1x.webp") type("image/webp") 1x, url("../img/form/form-background-tablet@2x.jpg") type("image/jpg") 2x, url("../img/form/form-background-tablet@1x.jpg") type("image/jpg") 1x);
+    background-image: image-set(url("/img/form/form-background-tablet@2x.webp") type("image/webp") 2x, url("/img/form/form-background-tablet@1x.webp") type("image/webp") 1x, url("/img/form/form-background-tablet@2x.jpg") type("image/jpg") 2x, url("/img/form/form-background-tablet@1x.jpg") type("image/jpg") 1x);
     border-radius: 16px;
 
     @media (min-width: $desktop-width) {
       width: 1240px;
 
-      background-image: image-set(url("../img/form/form-background-desktop@2x.webp") type("image/webp") 2x, url("../img/form/form-background-desktop@1x.webp") type("image/webp") 1x, url("../img/form/form-background-desktop@2x.jpg") type("image/jpg") 2x, url("../img/form/form-background-desktop@1x.jpg") type("image/jpg") 1x);
+      background-image: image-set(url("/img/form/form-background-desktop@2x.webp") type("image/webp") 2x, url("/img/form/form-background-desktop@1x.webp") type("image/webp") 1x, url("/img/form/form-background-desktop@2x.jpg") type("image/jpg") 2x, url("/img/form/form-background-desktop@1x.jpg") type("image/jpg") 1x);
     }
   }
 }
@@ -57,13 +58,13 @@
 
   @media (min-width: $desktop-width) {
     width: 350px;
-    padding: 30px 70px 40px;
+    padding: 30px 70px 41px;
   }
 }
 
 .form__title {
   margin: 0;
-  padding-bottom: 12.5px;
+  padding-bottom: 12px;
 
   font-weight: $regular;
   font-size: 18px;
@@ -137,7 +138,7 @@
   box-sizing: border-box;
   height: 50px;
   margin-top: 11.5px;
-  margin-bottom: 20px;
+  margin-bottom: 20.5px;
   padding-left: 25px;
 
   color: $color-default-white;
@@ -148,6 +149,7 @@
   outline: none;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
     margin-top: 12px;
   }
 
@@ -164,7 +166,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      height: 59px;
+      height: 90px;
       margin-bottom: 17px;
     }
   }

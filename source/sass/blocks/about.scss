@@ -253,22 +253,22 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 209px;
+    max-width: 211px;
     margin: 22px 0 0 20px;
-    padding: 15px 22px 15px 20px;
+    padding: 15.5px 20px 15px 20px;
 
     row-gap: 7px;
 
     &:nth-child(2n),
     &:nth-child(3n) {
-      margin: 22.5px 0 0 19.5px;
+      margin: 22px 0 0 20px;
     }
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
-    width: 402px;
+    max-width: 402px;
     margin: 22px 0 0 14px;
     padding: 50px 40px 30px;
 
@@ -367,5 +367,11 @@
     @media (min-width: $tablet-width) {
       font-size: 16px;
     }
+  }
+}
+
+.about__list .about__item:nth-child(3) p br {
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }

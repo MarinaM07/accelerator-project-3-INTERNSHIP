@@ -30,7 +30,7 @@ import { Scrollbar, Navigation } from 'swiper/modules';
     const swiperReviews = new Swiper('.reviews__swiper', {
       modules: [Scrollbar, Navigation],
       scrollbar: {
-        el: '.reviews__scrollbar',
+        el: '.reviews__swiper-scrollbar',
         draggable: true,
         dragSize: 394,
       },

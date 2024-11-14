@@ -1,43 +1,43 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 const sliderElement = document.querySelector('.slider__swiper');
 
-const setSliderHero = () => {
-  const slider = new Swiper(sliderElement, {
-    modules: [Autoplay, Pagination],
-    pagination: {
-      el: '.slider__pagination',
-      clickable: true,
-      type: 'bullets',
-      bulletElement: 'div',
-      bulletClass: 'slider__pagination-bullet',
-      bulletActiveClass: 'slider__pagination-bullet--active',
-    },
-    /* autoplay: {
-      delay: 3000,
-    }, */
-    loop: true,
-    breakpoints: {
-      1440: {
-        allowTouchMove: false,
-      },
-    },
-    on: {
-      slideChangeTransitionStart: function () {
-        slider.pagination.init();
-        slider.pagination.render();
-        slider.pagination.update();
-      }
-    }
-  });
-};
+const swiper = new Swiper(sliderElement, {
+  modules: [Autoplay],
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+});
+// Создание кастомной пагинации
+const paginationContainers = document.querySelectorAll('.slider__custom-pagination');
+const totalSlides = swiper.slides.length;
 
-const initSliderHero = () => {
-  if (document.body.contains(sliderElement)) {
-    setSliderHero();
+// Заполнение пагинации
+paginationContainers.forEach((container) => {
+  for (let i = 0; i < totalSlides; i++) {
+    const button = document.createElement('button');
+    button.classList.add('pagination-button');
+    button.dataset.index = i;
+    button.addEventListener('click', () => {
+      swiper.slideTo(i);
+    });
+    container.appendChild(button);
   }
-};
+});
+// Обновление активной кнопки пагинации
+swiper.on('slideChange', () => {
+  const activeIndex = swiper.realIndex;
+  paginationContainers.forEach((container) => {
+    const buttons = container.querySelectorAll('.pagination-button');
+    buttons.forEach((button) => {
+      button.classList.remove('active');
+    });
+    buttons[activeIndex].classList.add('active');
+  });
+});
 
-initSliderHero();
+// Инициализация активной кнопки для первого слайда
+paginationContainers[0].querySelector('.pagination-button').classList.add('active');

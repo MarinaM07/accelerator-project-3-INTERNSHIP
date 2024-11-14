@@ -7,7 +7,7 @@
   background-color: $color-yinmn-blue;
 
   @media (min-width: $tablet-width) {
-    padding: 100px 45px;
+    padding: 100px 45px 100.4px;
   }
 
   @media (min-width: $desktop-width) {
@@ -46,8 +46,6 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-
-    gap: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -62,12 +60,18 @@
   flex-direction: column;
 }
 
+.contacts__item-adress {
+  @media (min-width: $desktop-width) {
+    max-width: 263px;
+  }
+}
+
 .contacts__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 30px;
-  padding-bottom: 30.5px;
+  padding-bottom: 30px;
 
   border-bottom: 2px solid rgba($color-default-white, 0.2);
 
@@ -76,7 +80,7 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 30px;
 
-    gap: 31px;
+    gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -86,11 +90,15 @@
 
     gap: 60px;
   }
+
+  h2 {
+    color: #ffffff;
+  }
 }
 
 .contacts__heading {
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: 15.5px;
 
   font-weight: $regular;
   font-size: 12px;
@@ -102,10 +110,6 @@
   opacity: 0.8;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 23px;
-  }
-
-  @media (min-width: $desktop-width) {
     padding-bottom: 24px;
   }
 }
@@ -180,16 +184,19 @@
 
     background: url("/__spritemap#sprite-pin-view") no-repeat center;
 
-    /* background-size: 17.46px 24px; */
 
     @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 40px;
       top: 108px;
       left: 344.45px;
     }
 
     @media (min-width: $desktop-width) {
+      width: 58px;
+      height: 69px;
       top: 77.76px;
-      left: 617.55px;
+      left: 613px;
     }
   }
 }

@@ -1,14 +1,14 @@
 .footer {
-  width: 286px;
+  width: 290px;
   min-height: 80px;
   margin: 0 auto;
-  padding: 39px 16px 40px;
+  padding: 39px 15px 40px;
 
   word-break: break-word;
 
   @media (min-width: $tablet-width) {
     width: 678px;
-    padding: 39px 45px 38.2px;
+    padding: 38px 45px 38.2px;
   }
 
   @media (min-width: $desktop-width) {
@@ -60,7 +60,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   padding: 0;
   padding-top: 15px;
 
@@ -123,9 +123,9 @@
 .footer__inner {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
-  row-gap: 11px;
+  row-gap: 10px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -160,7 +160,7 @@
 
 .footer__policy-link {
   display: inline-block;
-  padding-bottom: 1.3px;
+  padding-bottom: 1.5px;
 
   font-weight: $regular;
   font-size: 12px;

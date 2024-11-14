@@ -7,6 +7,19 @@ const swiperSelector = '.news__swiper';
 const swiperWrapperSelector = '.news__swiper-wrapper';
 const swiperLinksSelector = '.news__content-button';
 const paginationBulletsSelector = '.swiper-pagination-bullet';
+const tabButtons = document.querySelectorAll('.news__tab');
+let currentTab = document.querySelector('.news__tab.is-active');
+
+tabButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    if (currentTab && currentTab !== button) {
+      currentTab.classList.remove('is-active');
+    }
+    button.classList.add('is-active');
+    currentTab = button;
+  });
+});
+
 
 const swiperNews = new Swiper(swiperSelector, {
   autoHeight: true,
