@@ -246,7 +246,7 @@
 .button--next {
   &::after {
     @media (min-width: $tablet-width) and (max-width: 1439px) {
-      top: 1px;
+      top: 0px;
       left: 1px;
     }
   }
